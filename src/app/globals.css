@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* Default: Light mode */
+:root {
+  /* Brand colors */
+  --color-primary: #fcfcfc;
+  --color-black-blue: #0b1021;
+  --color-sky: #4984e3;
+  --color-blue: #345da2;
+  --color-dark-blue: #1f3661;
+
+  /* Theme defaults (light mode) */
+  --background: #fcfcfc;   /* light background */
+  --foreground: #0b1021;   /* dark text */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Expose brand colors to Tailwind utilities */
+  --color-primary: var(--color-primary);
+  --color-black-blue: var(--color-black-blue);
+  --color-sky: var(--color-sky);
+  --color-blue: var(--color-blue);
+  --color-dark-blue: var(--color-dark-blue);
+
+  /* Fonts */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Dark mode: just swap background and foreground */
+[data-theme="dark"] {
+  --background: #0b1021;  /* dark background */
+  --foreground: #fcfcfc;  /* light text */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+}
