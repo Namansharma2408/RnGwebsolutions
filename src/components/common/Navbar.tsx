@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { useTheme } from '@/contexts/ThemeContext'  // Use the global theme context
-import {Logo} from "@/components";
+import { Logo } from "@/components";
 
 // Navigation items configuration (unchanged, but now theme-aware via styles)
 const navigationItems = [
@@ -49,60 +49,37 @@ const navigationItems = [
     }
 ]
 
-// Style configurations (updated to use CSS variables for theme-awareness and vibrancy)
-const styles = {
-    nav: 'w-full max-w-6xl mx-auto px-6 py-4 h-fit ',
-    container: 'flex items-center justify-between',
-    logo: {
-        container: 'flex items-center',
-        title: 'text-2xl font-bold',
-        subtitle: 'text-sm font-normal'
-    },
-    navigation: {
-        container: 'hidden md:flex items-center space-x-6',
-        item: {
-            base: 'flex items-center space-x-2 transition-colors duration-200 px-4 py-2 rounded-lg',
-            active: 'text-foreground bg-background hover:bg-foreground/20 hover:text-foreground/80',
-            inactive: 'text-foreground bg-background hover:bg-foreground/20 hover:text-foreground/80'
-        }
-    },
-    mobile: {
-        container: 'md:hidden',
-        button: 'text-foreground hover:text-red/80 focus:outline-none'
-    }
-}
-
 const Navbar = () => {
     const [activeItem, setActiveItem] = useState('vision');
     useTheme();  // Get current theme for dynamic behavior
 
     return (
-        <nav className={styles.nav}>
-            <div className={styles.container}>
+        <nav className="w-full max-w-6xl mx-auto px-6 py-4 h-fit">
+            <div className="flex items-center justify-between">
                 {/* Logo Section */}
-                <Logo/>
+                <Logo />
 
                 {/* Navigation Items */}
-                <div className={styles.navigation.container}>
-                    {navigationItems.map((item) => (
-                        <Link
-                            key={item.id}
-                            href={item.href}
-                            onClick={() => setActiveItem(item.id)}
-                            className={`${styles.navigation.item.base} ${activeItem === item.id
-                                    ? styles.navigation.item.active
-                                    : styles.navigation.item.inactive
+                <div className='bg-foreground/10 px-2 py-2 rounded-full'>
+                    <div className="hidden md:flex items-center space-x-6">
+                        {navigationItems.map((item) => (
+                            <Link
+                                key={item.id}
+                                href={item.href}
+                                onClick={() => setActiveItem(item.id)}
+                                className={`flex items-center space-x-2 transition-colors ease-in-out duration-500  px-4 py-2 rounded-full text-foreground bg-background hover:bg-foreground/20 hover:text-foreground/80 ${
+                                    activeItem === item.id ? 'ring-2 ring-sky/50' : ''
                                 }`}
-                        >
-                            {item.icon}
-                            <span>{item.label}</span>
-                        </Link>
-                    ))}
+                            >
+                                {item.icon}
+                                <span>{item.label}</span>
+                            </Link>
+                        ))}
+                    </div>
                 </div>
-
                 {/* Mobile Menu Button */}
-                <div className={styles.mobile.container}>
-                    <button className={styles.mobile.button}>
+                <div className="md:hidden">
+                    <button className="text-foreground hover:text-red/80 focus:outline-none">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
