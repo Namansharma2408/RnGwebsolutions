@@ -4,7 +4,6 @@ import { useTheme } from '@/hooks';
 
 const Page = () => {
   const theme = useTheme();
-  console.log("Current theme:", theme);
   return (
       <div className='bg-background '>
         
