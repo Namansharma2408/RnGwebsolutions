@@ -2,8 +2,7 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { useTheme } from '@/contexts/ThemeContext'  // Use the global theme context
-import Image from 'next/image'
-import {Logo,ThemeToggle} from "@/components";
+import {Logo} from "@/components";
 
 // Navigation items configuration (unchanged, but now theme-aware via styles)
 const navigationItems = [
@@ -50,8 +49,6 @@ const navigationItems = [
     }
 ]
 
-
-
 // Style configurations (updated to use CSS variables for theme-awareness and vibrancy)
 const styles = {
     nav: 'w-full max-w-6xl mx-auto px-6 py-4 h-fit ',
@@ -77,7 +74,7 @@ const styles = {
 
 const Navbar = () => {
     const [activeItem, setActiveItem] = useState('vision');
-    const { theme } = useTheme();  // Get current theme for dynamic behavior
+    useTheme();  // Get current theme for dynamic behavior
 
     return (
         <nav className={styles.nav}>
