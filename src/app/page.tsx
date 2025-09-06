@@ -2,16 +2,19 @@
 import React from 'react'
 import { ThemeToggle } from '@/components'
 import Image from "next/image";
+import { useTheme } from '@/hooks';
+import { ThemeProvider } from '@/contexts/ThemeContext';
 const page = () => {
+  const theme = useTheme();
+  console.log("Current theme:", theme);
   return (
-    <div className='bg-background '>
-      page
-      <ThemeToggle initialValue={'dark'} />
-      RnG website
-      <div className='w-40 h-40'>
-      <Image src="/logoLight.png" alt="Picture of the log" width={500} height={500} />
+    <ThemeProvider>
+      <div className='bg-background '>
+        
+        
+        
       </div>
-    </div>
+    </ThemeProvider>
 
 
   )

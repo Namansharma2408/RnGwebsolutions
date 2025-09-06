@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { cookies } from "next/headers"; 
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { cookies } from "next/headers";
+import { Navbar, ThemeToggle } from "@/components";
+import { Footer } from "@/components";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 
 
 const geistSans = Geist({
@@ -28,14 +30,28 @@ export default async function RootLayout({
 
   const cookieStore = await cookies();
   const theme = cookieStore?.get('theme');
-
+  type Theme = 'light' | 'dark';
   return (
     <html lang="en" data-theme={theme?.value}>
       <body
-        
+        className={`${geistSans.variable} ${geistMono.variable} font-sans bg-background text-foreground min-h-screen flex flex-col`}
       >
-        <ThemeToggle initialValue={theme?.value as ('light' | 'dark')} />
-        {children}
+        <ThemeProvider initialTheme={theme?.value as Theme}>
+          <nav className="flex justify-center items-center p-4">
+            <Navbar />
+            <div className="ml-4">
+              <ThemeToggle initialValue={(theme?.value as Theme) || 'light'} />
+            </div>
+          </nav>
+
+          <main className="flex-1">
+            {children}
+          </main>
+
+          <footer className="">
+            <Footer />
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   );
