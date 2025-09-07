@@ -34,8 +34,21 @@ export default async function RootLayout({
   return (
     <html lang="en" data-theme={theme?.value}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans bg-background text-foreground min-h-screen flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans bg-background text-foreground min-h-screen flex flex-col relative overflow-x-hidden`}
       >
+        {/* Subtle Vibrant Background - Blue/Indigo/blue/Gray only */}
+        <div className="fixed inset-0 w-full h-full -z-10 opacity-[0.25]">
+
+          <div className="absolute inset-0 bg-gradient-to-br from-blue via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-indigo to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-blue to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-bl from-gray-400 via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-l from-indigo via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-transparent via-blue to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-300 via-transparent to-transparent"></div>
+          </div>
+
         <ThemeProvider initialTheme={theme?.value as Theme}>
           <nav className="flex justify-center items-center p-4">
             <Navbar />

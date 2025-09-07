@@ -61,14 +61,14 @@ const Navbar = () => {
 
                 {/* Navigation Items */}
                 <div className='bg-foreground/10 px-2 py-2 rounded-full'>
-                    <div className="hidden md:flex items-center space-x-6">
+                    <div className="hidden md:flex items-center space-x-2">
                         {navigationItems.map((item) => (
                             <Link
                                 key={item.id}
                                 href={item.href}
                                 onClick={() => setActiveItem(item.id)}
                                 className={`flex items-center space-x-2 transition-colors ease-in-out duration-500  px-4 py-2 rounded-full text-foreground bg-background hover:bg-foreground/20 hover:text-foreground/80 ${
-                                    activeItem === item.id ? 'ring-2 ring-sky/50' : ''
+                                    activeItem === item.id ? 'bg-foreground/10' : ''
                                 }`}
                             >
                                 {item.icon}
