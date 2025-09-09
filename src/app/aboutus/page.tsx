@@ -70,7 +70,7 @@ const page = () => {
       <div>
         <div className='flex flex-col items-center justify-center w-full'>
           <div className='flex items-center justify-center w-fit px-12 space-x-4 py-16 bg-blue rounded-4xl'>
-            <h1 className='text-5xl font-bold text-background  text-center'>
+            <h1 className='text-5xl font-bold text-permanent-foreground  text-center'>
               MEET OUR TEAM
             </h1>
           </div>
@@ -103,10 +103,10 @@ const page = () => {
                       className='object-cover rounded-full  shadow-lg'
                     />
                     <div className='p-4 text-center'>
-                      <h3 className='text-xl font-semibold text-background'>
+                      <h3 className='text-xl font-semibold text-permanent-foreground'>
                         {member.name}
                       </h3>
-                      <p className='text-sm text-background'>
+                      <p className='text-sm text-permanent-foreground'>
                         {member.role}
                       </p>
                     </div>

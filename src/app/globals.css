@@ -19,6 +19,7 @@
   --color-teal: #00d4aa;       /* Fresh teal */
   --color-indigo: #4b7bec;     /* Deep indigo */
   --color-slate: #F1F5F9;      /* Neutral slate */
+  --color-gray: #6B7280;      /* Standard gray */
   /* Theme defaults (light mode) */
   --background: #fcfcfc;       /* light background */
   --foreground: #0b1021;       /* dark text */
@@ -49,6 +50,7 @@
   --color-teal: var(--color-teal);
   --color-indigo: var(--color-indigo);
   --color-slate: var(--color-slate);
+  --color-gray: var(--color-gray);
   /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);

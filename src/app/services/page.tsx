@@ -133,7 +133,7 @@ const page = () => {
 			{/* Render backgroundCloud image after all main content */}
 			<div className="relative w-full h-[200px] mt-20">
 				<Image src='/backgroundCloud.png' alt='Background Cloud' layout='fill' objectFit='cover' className='brightness-100' />
-				<h1 className="absolute inset-0 flex items-center justify-center text-6xl font-bold text-foreground">TERMS AND CONDITIONS</h1>
+				<h1 className="absolute inset-0 flex items-center justify-center text-6xl font-bold text-permanent-foreground">TERMS AND CONDITIONS</h1>
 			</div>
 
 			{/* Terms and Conditions Section */}

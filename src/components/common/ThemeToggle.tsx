@@ -1,22 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useTheme } from '@/contexts/ThemeContext';
 
-type Theme = 'light' | 'dark';
-
-function ThemeToggle({ initialValue }: { initialValue: Theme }) {
-  const [theme, setTheme] = useState(initialValue);
-
-  useEffect(() => {
-    if (theme) {
-      document.cookie = `theme=${theme};path=/;`;
-      document.documentElement.setAttribute('data-theme', theme);
-    } else {
-      // Set initial theme based on system preference if no initial value
-      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setTheme(systemPrefersDark ? 'dark' : 'light');
-    }
-  }, [theme]);
+function ThemeToggle({ initialValue }: { initialValue?: 'light' | 'dark' }) {
+  const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
@@ -28,11 +15,6 @@ function ThemeToggle({ initialValue }: { initialValue: Theme }) {
       toggleTheme();
     }
   };
-
-  // Fallback for client-side rendering if initialValue is not present
-  if (!theme) {
-    return null;
-  }
 
   return (
     <div
