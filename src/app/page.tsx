@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useTheme } from '@/contexts/ThemeContext'
+
 const servicesData = [
   {
     id: 1,
@@ -32,7 +33,7 @@ const servicesData = [
     image: '/im-service4.svg',
   },
 ]
-const page = () => {
+const Page = () => {
   const { theme: contextTheme } = useTheme();
   const [theme, setTheme] = useState(contextTheme);
 
@@ -623,4 +624,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
