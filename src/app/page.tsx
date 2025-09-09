@@ -349,7 +349,7 @@ const Page = () => {
         {/* Background Image - Blue Cloudy Sky */}
         <div className='absolute inset-0 -z-10'>
           <Image
-            src='https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384679/w2qqi1u2s1vgwkyhvj3w'
+            src='https://res.cloudinary.com/duusmu38g/image/upload/v1757449482/z7tk1xr6w5lwt4w6z22s.png'
             alt='Blue sky with clouds background'
             fill
             className="object-cover"
