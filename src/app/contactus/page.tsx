@@ -4,14 +4,14 @@ const Page = () => {
   return (
     <div className='min-h-screen relative flex items-center py-8 sm:py-16'>
       <div className='absolute inset-0'>
-        <Image src='/backgroundCloud.png' alt='Contact Us' layout='fill' objectFit='cover' className='brightness-100' />
+        <Image src='https://res.cloudinary.com/duusmu38g/image/upload/v1757384679/w2qqi1u2s1vgwkyhvj3w' alt='Contact Us' layout='fill' objectFit='cover' className='brightness-100' />
         <div className='absolute inset-0 '></div>
       </div>
       <div className='relative z-10 w-full px-4 sm:px-6 lg:px-8'>
         <h1 className='text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-permanent-foreground mb-8 sm:mb-12'>&ldquo;Let&rsquo;s Build Something Great Together&rdquo;</h1>
         <div className='bg-permanent-foreground/20 backdrop-blur-md max-w-xs sm:max-w-lg lg:max-w-3xl xl:max-w-4xl mx-auto p-6 sm:p-8 lg:p-10 rounded-2xl shadow-2xl border border-foreground/10 '>
           <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-lg xl:max-w-2xl h-32 sm:h-40 lg:h-48 xl:h-64 mx-auto overflow-hidden rounded-xl mb-6 sm:mb-8">
-            <Image src='/contactLogo.png' alt='Contact Us' layout='fill' objectFit='cover' objectPosition='center' />
+            <Image src='https://res.cloudinary.com/duusmu38g/image/upload/v1757384670/vdsgm6zi0nl3rpttyt15' alt='Contact Us' layout='fill' objectFit='cover' objectPosition='center' />
           </div>
           <form action="" className="space-y-4 sm:space-y-6">
             <div>

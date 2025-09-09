@@ -51,24 +51,28 @@ const navigationItems = [
 
 const Navbar = () => {
     const [activeItem, setActiveItem] = useState('vision');
-    useTheme();  // Get current theme for dynamic behavior
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const { theme } = useTheme();  // Get current theme for dynamic behavior
+
+    const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
     return (
-        <nav className="w-full max-w-6xl mx-auto px-6 py-4 h-fit">
-            <div className="flex items-center justify-between">
-                {/* Logo Section */}
-                <Logo />
+        <>
+            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-4">
+                <div className="flex items-center justify-between">
+                    {/* Logo Section */}
+                    <Logo />
+                    
 
-                {/* Navigation Items */}
-                <div className='bg-foreground/10 px-2 py-2 rounded-full'>
-                    <div className="hidden md:flex items-center space-x-2">
+                    {/* Desktop Navigation Items */}
+                    <div className='hidden md:flex items-center space-x-2 bg-foreground/10 px-2 py-2 rounded-full'>
                         {navigationItems.map((item) => (
                             <Link
                                 key={item.id}
                                 href={item.href}
                                 onClick={() => setActiveItem(item.id)}
-                                className={`flex items-center space-x-2 transition-colors ease-in-out duration-500  px-4 py-2 rounded-full text-foreground bg-background hover:bg-foreground/20 hover:text-foreground/80 ${
-                                    activeItem === item.id ? 'bg-foreground/10' : ''
+                                className={`flex items-center space-x-2 transition-colors ease-in-out duration-300 px-4 py-2 rounded-full text-foreground bg-background hover:bg-foreground/20 hover:text-foreground/80 ${
+                                    activeItem === item.id ? 'bg-foreground/20 text-foreground' : ''
                                 }`}
                             >
                                 {item.icon}
@@ -76,17 +80,58 @@ const Navbar = () => {
                             </Link>
                         ))}
                     </div>
-                </div>
-                {/* Mobile Menu Button */}
-                <div className="md:hidden">
-                    <button className="text-foreground hover:text-red/80 focus:outline-none">
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
+
+                    {/* Mobile Menu Button */}
+                    <div className="md:hidden">
+                        <button 
+                            onClick={toggleMobileMenu}
+                            className="text-foreground hover:text-foreground/80 focus:outline-none p-2"
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </nav>
+
+            {/* Mobile Menu Overlay */}
+            {isMobileMenuOpen && (
+                <div className='h-[100vh] w-full bg-background/60 fixed inset-0 z-50'>
+                    <div className="flex flex-col items-center justify-center min-h-screen space-y-6 px-4 sm:px-6">
+                        {/* Close Button */}
+                        <button 
+                            onClick={toggleMobileMenu}
+                            className="self-end text-foreground hover:text-foreground/80 focus:outline-none p-2"
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+
+                        {/* Mobile Navigation Items */}
+                        <div className="flex flex-col space-y-4">
+                            {navigationItems.map((item) => (
+                                <Link
+                                    key={item.id}
+                                    href={item.href}
+                                    onClick={() => {
+                                        setActiveItem(item.id);
+                                        setIsMobileMenuOpen(false);
+                                    }}
+                                    className={`flex items-center space-x-3 transition-colors ease-in-out duration-300 px-4 sm:px-6 py-3 rounded-full text-foreground bg-background/90 backdrop-blur-sm border border-foreground/30 shadow-xl hover:bg-foreground/20 hover:text-foreground/80 ${
+                                        activeItem === item.id ? 'bg-foreground/30 text-foreground' : ''
+                                    }`}
+                                >
+                                    {item.icon}
+                                    <span className="text-lg">{item.label}</span>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            )}
+        </>
     )
 }
 

@@ -50,7 +50,7 @@ export default async function RootLayout({
           </div>
 
         <ThemeProvider initialTheme={theme?.value as Theme}>
-          <nav className="flex justify-center items-center p-4">
+          <nav className="top-0 z-50  flex justify-center items-center p-4">
             <Navbar />
             <div className="ml-4">
               <ThemeToggle initialValue={(theme?.value as Theme) || 'light'} />

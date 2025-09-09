@@ -41,7 +41,7 @@ const page = () => {
         <div className='flex items-center justify-center w-full relative'>
           <div className='w-[529px] h-[529px] rounded-2xl flex items-center justify-center  relative'>
             <Image
-              src='/whoweare.png'
+              src='https://res.cloudinary.com/duusmu38g/image/upload/v1757384673/mac2yqzkhvjjpxnmxbzb.png'
               alt='About Us'
               layout='responsive'
               width={529}
@@ -85,7 +85,7 @@ const page = () => {
                   {/* Background image */}
                   <div className='absolute inset-0 w-full h-full z-0'>
                     <Image
-                      src='/backgroundCloud.png'
+                      src='https://res.cloudinary.com/duusmu38g/image/upload/v1757384679/w2qqi1u2s1vgwkyhvj3w.png'
                       alt='Background'
                       layout='fill'
                       objectFit='cover'
@@ -95,7 +95,7 @@ const page = () => {
                   {/* Member image */}
                   <div className='relative z-10 flex flex-col items-center justify-center'>
                     <Image
-                      src='/naman.png'
+                      src='https://res.cloudinary.com/duusmu38g/image/upload/v1757384674/w4nyde3zb3zcpogqzvvd'
                       alt={member.name}
                       layout='responsive'
                       width={300}
@@ -123,7 +123,7 @@ const page = () => {
         <div className='flex items-center justify-center w-full relative'>
           <div className='w-[529px] h-[529px] rounded-2xl flex items-center justify-center  relative'>
             <Image
-              src='/mission.png'
+              src='https://res.cloudinary.com/duusmu38g/image/upload/v1757384673/gzybvo6saqmamwxekhz8.png'
               alt='About Us'
               layout='responsive'
               width={529}
@@ -167,7 +167,7 @@ const page = () => {
         <div className='flex items-center justify-center w-full relative'>
           <div className='w-[529px] h-[529px] rounded-2xl flex items-center justify-center  relative'>
             <Image
-              src='/local.png'
+              src='https://res.cloudinary.com/duusmu38g/image/upload/v1757384671/njhmtioplriwztcdds5b.png'
               alt='About Us'
               layout='responsive'
               width={529}
