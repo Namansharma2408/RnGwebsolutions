@@ -39,114 +39,103 @@ const Page = () => {
 
   useEffect(() => {
     setTheme(contextTheme);
-    console.log('Current theme:', contextTheme);
   }, [contextTheme]);
 
   return (
     <div>
-      <div className="min-h-screen lg:h-[80vh] lg:min-h-fit relative overflow-hidden flex flex-col mt-16">
-
-        {/* Top Section - Flexible height on mobile, fixed on desktop */}
-        <div className='flex-1 lg:h-[60vh] flex-shrink-0'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 min-h-fit lg:h-full px-4 sm:px-6 lg:px-16 pt-4 pb-6 lg:pt-2 lg:pb-4 relative z-10'>
+      <div className="relative flex flex-col min-h-screen  overflow-hidden">
+        {/* Top Section */}
+        <div className="flex-1 flex-shrink-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 px-4 sm:px-6 lg:px-16  pb-8 h-full relative z-10">
 
             {/* Left Side - Logo with floating icons */}
-            <div className='flex justify-center w-full relative mb-6 lg:mb-0'>
+            <div className="flex justify-center items-center relative mb-8 lg:mb-0">
 
-              {/* Floating Icons - responsive positioning */}
+              {/* Floating Icons */}
               <div className="absolute inset-0 pointer-events-none">
-                {/* Green checkmark icon - top left of logo area */}
-                <div className="absolute top-12 sm:top-16 left-4 sm:left-16 w-8 h-8 sm:w-12 sm:h-12 bg-green-600 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg transform rotate-12">
-                  <svg className="w-4 h-4 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {/* Green Check */}
+                <div className="absolute top-[10%] left-[5%] w-14 h-14 sm:w-16 sm:h-16 bg-green-600 rounded-2xl flex items-center justify-center shadow-lg rotate-12">
+                  <svg className="w-7 h-7 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
 
-                {/* Orange analytics icon - top right of logo area */}
-                <div className="absolute top-8 sm:top-12 right-4 sm:right-12 w-8 h-8 sm:w-12 sm:h-12 bg-orange-500 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg transform -rotate-6">
-                  <svg className="w-4 h-4 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {/* Orange Analytics */}
+                <div className="absolute top-[8%] right-[5%] w-14 h-14 sm:w-16 sm:h-16 bg-orange-500 rounded-2xl flex items-center justify-center shadow-lg -rotate-6">
+                  <svg className="w-7 h-7 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
 
-                {/* Additional floating icons for cinematic effect */}
-                {/* Blue gear icon - left middle of logo area */}
-                <div className="absolute top-1/2 left-2 sm:left-8 w-6 h-6 sm:w-10 sm:h-10 bg-purple-600 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg transform rotate-45 -translate-y-1/2">
-                  <svg className="w-3 h-3 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {/* Purple Chat */}
+                <div className="absolute top-1/2 left-[5%] w-12 h-12 sm:w-14 sm:h-14 bg-purple-600 rounded-xl flex items-center justify-center shadow-lg rotate-45 -translate-y-1/2">
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                   </svg>
                 </div>
 
-                {/* Teal lightning icon - right middle of logo area */}
-                <div className="absolute top-1/2 right-2 sm:right-8 w-6 h-6 sm:w-10 sm:h-10 bg-red-500 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg transform -rotate-30 translate-y-4">
-                  <svg className="w-3 h-3 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {/* Red Chart */}
+                <div className="absolute top-1/2 right-[5%] w-12 h-12 sm:w-14 sm:h-14 bg-red-500 rounded-xl flex items-center justify-center shadow-lg -rotate-30 translate-y-6">
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
                   </svg>
                 </div>
               </div>
 
-              {/* Logo container - responsive sizing */}
-              <div className='relative flex items-center justify-center h-full min-h-[350px] lg:min-h-full'>
-                <div className='absolute rounded-3xl h-[550px] sm:h-[700px] lg:h-[950px] w-[1000px] sm:w-[1200px] lg:w-[1400px] p-4 sm:p-6 flex '>
-                  <div className='flex items-center justify-center'>
-                    <Image
-                      src={theme === 'dark' ? 'https://res.cloudinary.com/duusmu38g/image/upload/v1757449474/tpspdxr8czvdzmvvepau.svg' : 'https://res.cloudinary.com/duusmu38g/image/upload/v1757449475/gimfgzszdu8ugegnszzv.svg'}
-                      alt='R&G Web Solutions'
-                      width={500}
-                      height={450}
-                      priority
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                </div>
+              {/* Logo */}
+              <div className="relative w-[90%] max-w-[700px] aspect-square">
+                <Image
+                  src={
+                    theme === "dark"
+                      ? "https://res.cloudinary.com/duusmu38g/image/upload/v1757449474/tpspdxr8czvdzmvvepau.svg"
+                      : "https://res.cloudinary.com/duusmu38g/image/upload/v1757449475/gimfgzszdu8ugegnszzv.svg"
+                  }
+                  alt="R&G Web Solutions"
+                  fill
+                  priority
+                  className="object-contain"
+                  sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 40vw"
+                />
               </div>
             </div>
 
-            {/* Right Side - Main Headline */}
-            <div className='flex flex-col justify-center text-center lg:text-left'>
-              <div className='space-y-3 lg:space-y-4 relative'>
-                <h1 className='text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-7xl font-bold leading-tight px-4 lg:px-0 xl:pr-40'>
-                  Helping Local Businesses Succeed Online
-                </h1>
-
-                {/* Blue underline accent - responsive sizing */}
-                <div className='flex justify-center lg:justify-start'>
-                  <svg width="250" height="30" viewBox="0 0 600 80" className="overflow-visible w-[250px] h-[30px] sm:w-[350px] sm:h-[40px] lg:w-[400px] lg:h-[60px]">
-                    <path
-                      d="M 10 60 Q 300 10 590 60"
-                      stroke="currentColor"
-                      strokeWidth="8"
-                      fill="transparent"
-                      strokeLinecap="round"
-                      className="text-blue-500"
-                    />
-                  </svg>
-                </div>
+            {/* Right Side - Headline */}
+            <div className="flex flex-col justify-center text-center lg:text-left">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight px-4 lg:px-0 xl:pr-40">
+                Helping Local Businesses Succeed Online
+              </h1>
+              <div className="flex justify-center lg:justify-start mt-4">
+                <svg viewBox="0 0 600 80" className="w-[280px] sm:w-[380px] lg:w-[440px] h-[40px] sm:h-[50px] lg:h-[70px]">
+                  <path
+                    d="M 10 60 Q 300 10 590 60"
+                    stroke="currentColor"
+                    strokeWidth="10"
+                    fill="transparent"
+                    strokeLinecap="round"
+                    className="text-blue-500"
+                  />
+                </svg>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Section - CTA buttons with flexible height */}
-        <div className='flex-shrink-0 py-8 lg:py-6 px-4 sm:px-6 lg:px-16'>
-          <div className='w-full max-w-7xl mx-auto flex flex-col justify-center'>
-            <div className='text-center mb-4 lg:mb-6'>
-              <p className='text-base sm:text-lg lg:text-xl xl:text-2xl opacity-75 max-w-4xl mx-auto text-foreground px-4'>
-                Professional web design, SEO, hosting, and AI solutions built for growth
-              </p>
-            </div>
-
-            <div className='flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 lg:gap-8'>
-              <button className='bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base text-white transition-all duration-300 hover:scale-105 shadow-xl w-full sm:w-auto'>
-                Book your <span className='font-bold mx-1 sm:mx-2'>Free Consultation</span>
-                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        {/* Bottom Section */}
+        <div className="flex-shrink-0 py-12 px-4 sm:px-6 lg:px-16">
+          <div className="w-full max-w-7xl mx-auto flex flex-col items-center">
+            <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl opacity-75 max-w-4xl text-center mb-8">
+              Professional web design, SEO, hosting, and AI solutions built for growth
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 lg:gap-10">
+              <button className="bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center px-8 py-4 text-lg text-white transition-all duration-300 hover:scale-105 shadow-xl">
+                Book your <span className="font-bold mx-2">Free Consultation</span>
+                <svg className="w-6 h-6 text-white ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
               </button>
-
-              <button className='border-2 border-blue-500 hover:bg-blue-500 hover:text-white rounded-full flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base text-foreground transition-all duration-300 hover:scale-105 w-full sm:w-auto'>
-                Get my <span className='font-bold mx-1 sm:mx-2'>Free Website Audit</span>
-                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-blue-500 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <button className="border-2 border-blue-500 hover:bg-blue-500 hover:text-white rounded-full flex items-center justify-center px-8 py-4 text-lg text-foreground transition-all duration-300 hover:scale-105">
+                Get my <span className="font-bold mx-2">Free Website Audit</span>
+                <svg className="w-6 h-6 text-blue-500 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <circle cx="12" cy="12" r="10" strokeWidth="2" />
                   <path d="M2 12h20" strokeWidth="2" />
                   <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" strokeWidth="2" />
@@ -156,6 +145,8 @@ const Page = () => {
           </div>
         </div>
       </div>
+
+
 
       {/* Services Section */}
       <div className='relative py-24 px-6 sm:px-8 lg:px-16'>
