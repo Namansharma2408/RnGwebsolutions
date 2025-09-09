@@ -47,6 +47,7 @@ const page = () => {
               width={529}
               height={529}
               className='rounded-2xl'
+              priority
             />
             <div className='absolute -bottom-8 left-1/2 -translate-x-1/2 w-[400px] px-6 py-6 bg-slate rounded-2xl shadow-xl flex flex-col items-center justify-center text-center '>
               <h2 className='text-2xl font-semibold mb-2 text-foreground'>
@@ -90,6 +91,7 @@ const page = () => {
                       layout='fill'
                       objectFit='cover'
                       className='object-cover'
+                      priority
                     />
                   </div>
                   {/* Member image */}
@@ -101,6 +103,7 @@ const page = () => {
                       width={300}
                       height={300}
                       className='object-cover rounded-full  shadow-lg'
+                      priority
                     />
                     <div className='p-4 text-center'>
                       <h3 className='text-xl font-semibold text-permanent-foreground'>
@@ -129,6 +132,7 @@ const page = () => {
               width={529}
               height={529}
               className='rounded-2xl'
+              priority
             />
 
           </div>
@@ -173,6 +177,7 @@ const page = () => {
               width={529}
               height={529}
               className='rounded-2xl'
+              priority
             />
 
           </div>

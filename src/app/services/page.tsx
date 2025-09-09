@@ -109,7 +109,7 @@ const page = () => {
 					>
 						{/* Floating image above card */}
 						<div className="absolute -top-12 sm:-top-16 left-1/2 -translate-x-1/2 w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center z-10">
-							<Image src={service.image} width={80} height={80} alt={service.title} className="object-contain drop-shadow-xl sm:w-[120px] sm:h-[120px]" />
+							<Image src={service.image} width={80} height={80} alt={service.title} className="object-contain drop-shadow-xl sm:w-[120px] sm:h-[120px]" priority/>
 						</div>
 						<h2 className="text-xl sm:text-2xl font-bold mb-3 mt-2 text-sky text-center" >{service.title}</h2>
 						<p className="mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed text-foreground/70 text-center">{service.description}</p>
@@ -132,7 +132,7 @@ const page = () => {
 
 			{/* Render backgroundCloud image after all main content */}
 			<div className="relative w-full h-[200px] mt-20">
-				<Image src='https://res.cloudinary.com/duusmu38g/image/upload/v1757384679/w2qqi1u2s1vgwkyhvj3w' alt='Background Cloud' layout='fill' objectFit='cover' className='brightness-100' />
+				<Image src='https://res.cloudinary.com/duusmu38g/image/upload/v1757384679/w2qqi1u2s1vgwkyhvj3w' alt='Background Cloud' layout='fill' objectFit='cover' className='brightness-100' priority />
 				<h1 className="absolute inset-0 flex items-center justify-center text-6xl font-bold text-permanent-foreground">TERMS AND CONDITIONS</h1>
 			</div>
 
