@@ -9,28 +9,28 @@ const servicesData = [
     title: 'Web Design',
     description:
       'Custom, responsive, and visually appealing websites designed to match your brand and convert visitors into customers.',
-    image: 'https://res.cloudinary.com/duusmu38g/image/upload/v1757384670/z6hozwrhjoschjyso7bd.svg',
+    image: 'https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384670/z6hozwrhjoschjyso7bd.svg',
   },
   {
     id: 2,
     title: 'Hosting and Deployment',
     description:
       'Custom, responsive, and visually appealing websites designed to match your brand and convert visitors into customers.',
-    image: 'https://res.cloudinary.com/duusmu38g/image/upload/v1757384670/ih3tdtaedizzs2lb8vzg.svg',
+    image: 'https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384670/ih3tdtaedizzs2lb8vzg.svg',
   },
   {
     id: 3,
     title: 'SEO Optimization',
     description:
       'Improve your search engine rankings and ensure customers can find you online.',
-    image: 'https://res.cloudinary.com/duusmu38g/image/upload/v1757384670/woxiy0zygihdsmnnlrpq.svg',
+    image: 'https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384670/woxiy0zygihdsmnnlrpq.svg',
   },
   {
     id: 4,
     title: 'AI Integration',
     description:
       'Prevent insider threat with visibility and alerts for anomalous activities in any SaaS app',
-    image: 'https://res.cloudinary.com/duusmu38g/image/upload/v1757384670/vztdzgdwp9k0un7qagd4.svg',
+    image: 'https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384670/vztdzgdwp9k0un7qagd4.svg',
   },
 ]
 const Page = () => {
@@ -90,7 +90,7 @@ const Page = () => {
                 <div className='absolute rounded-3xl h-[550px] sm:h-[700px] lg:h-[950px] w-[1000px] sm:w-[1200px] lg:w-[1400px] p-4 sm:p-6 flex '>
                   <div className='flex items-center justify-center'>
                     <Image
-                      src={theme === 'dark' ? 'https://res.cloudinary.com/duusmu38g/image/upload/v1757384674/tebhsdjaqyssplhmfexy.svg' : 'https://res.cloudinary.com/duusmu38g/image/upload/v1757384673/bmnde9tqjsw0ys22hixi.svg'}
+                      src={theme === 'dark' ? 'https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384674/tebhsdjaqyssplhmfexy.svg' : 'https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384673/bmnde9tqjsw0ys22hixi.svg'}
                       alt='R&G Web Solutions'
                       width={500}
                       height={450}
@@ -162,7 +162,7 @@ const Page = () => {
         {/* Background Cloud */}
         <div className='absolute inset-0 -z-10'>
           <Image
-            src='https://res.cloudinary.com/duusmu38g/image/upload/v1757384679/w2qqi1u2s1vgwkyhvj3w'
+            src='https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384679/w2qqi1u2s1vgwkyhvj3w'
             alt='Background Cloud'
             fill
             priority
@@ -200,7 +200,7 @@ const Page = () => {
             {servicesData.map((service) => (
               <div
                 key={service.id}
-                className="relative flex flex-col items-center justify-start text-left shadow-lg glass-effect p-6 sm:p-8 pt-16 sm:pt-20 bg-foreground/60 transition-all duration-300 hover:scale-105 hover:shadow-blue-500/20 mb-20"
+                className="relative flex flex-col items-center justify-start text-left shadow-lg glass-effect p-6 sm:p-8 pt-16 sm:pt-20 bg-white/60 transition-all duration-300 hover:scale-105 hover:shadow-blue-500/20 mb-20"
 
               >
                 {/* Floating image above card */}
@@ -208,17 +208,17 @@ const Page = () => {
                   <Image src={service.image} width={80} height={80} alt={service.title} className="object-contain drop-shadow-xl sm:w-[120px] sm:h-[120px]" />
                 </div>
                 <h2 className="text-xl sm:text-2xl font-bold mb-3 mt-2 text-sky text-center" >{service.title}</h2>
-                <p className="mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed text-foreground/70 text-center">{service.description}</p>
+                <p className="mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed text-white/80 text-center">{service.description}</p>
                 <button
-                  className="flex items-center gap-2 font-medium py-2 px-4 sm:px-6 rounded-lg transition-colors duration-200 shadow text-foreground"
+                  className="flex items-center gap-2 font-medium py-2 px-4 sm:px-6 rounded-lg transition-colors duration-200 shadow text-permanent-foreground"
 
                 >
                   Read more
                   <span
-                    className="w-4 h-4 sm:w-5 sm:h-5 rounded-md flex items-center justify-center bg-foreground/30"
+                    className="w-4 h-4 sm:w-5 sm:h-5 rounded-md flex items-center justify-center bg-white/30"
                   >
                     <svg width="12" height="12" fill="none" viewBox="0 0 24 24" className="sm:w-4 sm:h-4">
-                      <path stroke="var(--foreground)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
+                      <path stroke="var(--permanent-background)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
                     </svg>
                   </span>
                 </button>
@@ -276,7 +276,7 @@ const Page = () => {
                 {/* Main image container */}
                 <div className='relative w-full h-full rounded-3xl overflow-hidden shadow-2xl border border-permanent-foreground/10 '>
                   <Image
-                    src='https://res.cloudinary.com/duusmu38g/image/upload/v1757384673/mac2yqzkhvjjpxnmxbzb'
+                    src='https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384673/mac2yqzkhvjjpxnmxbzb'
                     alt='About Us - Two entrepreneurs working together'
                     fill
                     className='object-cover'
@@ -349,7 +349,7 @@ const Page = () => {
         {/* Background Image - Blue Cloudy Sky */}
         <div className='absolute inset-0 -z-10'>
           <Image
-            src='https://res.cloudinary.com/duusmu38g/image/upload/v1757384679/w2qqi1u2s1vgwkyhvj3w'
+            src='https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384679/w2qqi1u2s1vgwkyhvj3w'
             alt='Blue sky with clouds background'
             fill
             className="object-cover"
@@ -414,7 +414,7 @@ const Page = () => {
                 {/* Main image container */}
                 <div className='relative w-full h-full rounded-3xl overflow-hidden shadow-2xl border border-white/20 bg-white/10 backdrop-blur-sm'>
                   <Image
-                    src='https://res.cloudinary.com/duusmu38g/image/upload/v1757384673/gzybvo6saqmamwxekhz8'
+                    src='https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384673/gzybvo6saqmamwxekhz8'
                     alt='Our Mission - Business Growth and Success'
                     fill
                     className='object-cover'
@@ -452,7 +452,7 @@ const Page = () => {
                 {/* Main image container */}
                 <div className='relative w-full h-full rounded-3xl overflow-hidden shadow-2xl border border-permanent-foreground/10 bg-white dark:bg-gray-900'>
                   <Image
-                    src='https://res.cloudinary.com/duusmu38g/image/upload/v1757384671/njhmtioplriwztcdds5b'
+                    src='https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384671/njhmtioplriwztcdds5b'
                     alt='Why Local Business Trust Us'
                     fill
                     className='object-cover'
@@ -547,14 +547,14 @@ const Page = () => {
 
         <div className='min-h-screen relative flex items-center py-8 sm:py-16'>
           <div className='absolute inset-0'>
-            <Image src='https://res.cloudinary.com/duusmu38g/image/upload/v1757384679/w2qqi1u2s1vgwkyhvj3w' alt='Contact Us' layout='fill' objectFit='cover' className='brightness-100' priority />
+            <Image src='https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384679/w2qqi1u2s1vgwkyhvj3w' alt='Contact Us' layout='fill' objectFit='cover' className='brightness-100' priority />
             <div className='absolute inset-0 '></div>
           </div>
           <div className='relative z-10 w-full px-4 sm:px-6 lg:px-8'>
             <h1 className='text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-permanent-foreground mb-8 sm:mb-12'>&ldquo;Let&rsquo;s Build Something Great Together&rdquo;</h1>
             <div className='bg-permanent-foreground/20 backdrop-blur-md max-w-xs sm:max-w-lg lg:max-w-3xl xl:max-w-4xl mx-auto p-6 sm:p-8 lg:p-10 rounded-2xl shadow-2xl border border-foreground/10 '>
               <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-lg xl:max-w-2xl h-32 sm:h-40 lg:h-48 xl:h-64 mx-auto overflow-hidden rounded-xl mb-6 sm:mb-8">
-                <Image src='https://res.cloudinary.com/duusmu38g/image/upload/v1757384670/vdsgm6zi0nl3rpttyt15' alt='Contact Us' layout='fill' objectFit='cover' objectPosition='center' priority />
+                <Image src='https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384670/vdsgm6zi0nl3rpttyt15' alt='Contact Us' layout='fill' objectFit='cover' objectPosition='center' priority />
               </div>
               <form action="" className="space-y-4 sm:space-y-6">
                 <div>

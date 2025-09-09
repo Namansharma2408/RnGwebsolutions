@@ -6,28 +6,28 @@ const servicesData = [
 		title: 'Web Design',
 		description:
 			'Custom, responsive, and visually appealing websites designed to match your brand and convert visitors into customers.',
-		image: 'https://res.cloudinary.com/duusmu38g/image/upload/v1757384670/z6hozwrhjoschjyso7bd.svg',
+		image: 'https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384670/z6hozwrhjoschjyso7bd.svg',
 	},
 	{
 		id: 2,
 		title: 'Hosting and Deployment',
 		description:
 			'Custom, responsive, and visually appealing websites designed to match your brand and convert visitors into customers.',
-			image: 'https://res.cloudinary.com/duusmu38g/image/upload/v1757384670/ih3tdtaedizzs2lb8vzg.svg',
+			image: 'https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384670/ih3tdtaedizzs2lb8vzg.svg',
 	},
 	{
 		id: 3,
 		title: 'SEO Optimization',
 		description:
 			'Improve your search engine rankings and ensure customers can find you online.',
-		image: 'https://res.cloudinary.com/duusmu38g/image/upload/v1757384670/woxiy0zygihdsmnnlrpq.svg',
+		image: 'https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384670/woxiy0zygihdsmnnlrpq.svg',
 	},
 	{
 		id: 4,
 		title: 'AI Integration',
 		description:
 			'Prevent insider threat with visibility and alerts for anomalous activities in any SaaS app',
-		image: 'https://res.cloudinary.com/duusmu38g/image/upload/v1757384670/vztdzgdwp9k0un7qagd4.svg',
+		image: 'https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384670/vztdzgdwp9k0un7qagd4.svg',
 	},
 ]
 const termsandconditions = [
@@ -132,7 +132,7 @@ const page = () => {
 
 			{/* Render backgroundCloud image after all main content */}
 			<div className="relative w-full h-[200px] mt-20">
-				<Image src='https://res.cloudinary.com/duusmu38g/image/upload/v1757384679/w2qqi1u2s1vgwkyhvj3w' alt='Background Cloud' layout='fill' objectFit='cover' className='brightness-100' priority />
+				<Image src='https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384679/w2qqi1u2s1vgwkyhvj3w' alt='Background Cloud' layout='fill' objectFit='cover' className='brightness-100' priority />
 				<h1 className="absolute inset-0 flex items-center justify-center text-6xl font-bold text-permanent-foreground">TERMS AND CONDITIONS</h1>
 			</div>
 
