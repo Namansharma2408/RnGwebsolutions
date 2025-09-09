@@ -41,7 +41,7 @@ const page = () => {
         <div className='flex items-center justify-center w-full relative'>
           <div className='w-[529px] h-[529px] rounded-2xl flex items-center justify-center  relative'>
             <Image
-              src='https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384673/mac2yqzkhvjjpxnmxbzb.png'
+              src='https://res.cloudinary.com/duusmu38g/image/upload/v1757449474/lg0redk3yovoiwvn8dhr.png'
               alt='About Us'
               layout='responsive'
               width={529}
@@ -86,7 +86,7 @@ const page = () => {
                   {/* Background image */}
                   <div className='absolute inset-0 w-full h-full z-0'>
                     <Image
-                      src='https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384679/w2qqi1u2s1vgwkyhvj3w.png'
+                      src='https://res.cloudinary.com/duusmu38g/image/upload/v1757449482/z7tk1xr6w5lwt4w6z22s.png'
                       alt='Background'
                       layout='fill'
                       objectFit='cover'
@@ -97,7 +97,7 @@ const page = () => {
                   {/* Member image */}
                   <div className='relative z-10 flex flex-col items-center justify-center'>
                     <Image
-                      src='https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384674/w4nyde3zb3zcpogqzvvd'
+                      src='https://res.cloudinary.com/duusmu38g/image/upload/v1757449476/qwi3sqtmygll4mezx8va.png'
                       alt={member.name}
                       layout='responsive'
                       width={300}
@@ -126,7 +126,7 @@ const page = () => {
         <div className='flex items-center justify-center w-full relative'>
           <div className='w-[529px] h-[529px] rounded-2xl flex items-center justify-center  relative'>
             <Image
-              src='https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384673/gzybvo6saqmamwxekhz8.png'
+              src='https://res.cloudinary.com/duusmu38g/image/upload/v1757449473/zapif77gqlqtsvsasxwq.png'
               alt='About Us'
               layout='responsive'
               width={529}
@@ -171,7 +171,7 @@ const page = () => {
         <div className='flex items-center justify-center w-full relative'>
           <div className='w-[529px] h-[529px] rounded-2xl flex items-center justify-center  relative'>
             <Image
-              src='https://res.cloudinary.com/duusmu38g/image/upload/f_auto,q_auto,dpr_auto,cs_srgb/v1757384671/njhmtioplriwztcdds5b.png'
+              src='https://res.cloudinary.com/duusmu38g/image/upload/v1757449471/iunadcac7gaaxbdzoo8u.png'
               alt='About Us'
               layout='responsive'
               width={529}
