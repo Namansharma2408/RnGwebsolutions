@@ -30,9 +30,9 @@ const Page = () => {
         
         {/* Contact Information Footer */}
         <div className="max-w-xs sm:max-w-lg lg:max-w-3xl xl:max-w-4xl mx-auto mt-8 backdrop-blur-xl rounded-2xl p-6 sm:p-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center text-center md:text-left">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6  md:text-left ">
             {/* Phone Numbers */}
-            <div className="flex flex-col items-center md:items-start space-y-2">
+            <div className="flex flex-col  items-start space-y-2">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-permanent-foreground rounded-full flex items-center justify-center">
                   <svg className="w-5 h-5 text-sky" fill="currentColor" viewBox="0 0 20 20">
@@ -41,13 +41,13 @@ const Page = () => {
                 </div>
                 <div className="text-permanent-foreground">
                   <div className="font-medium">+1(647)-986-2677</div>
-                  <div className="text-sm">+1(437)-667-5323</div>
+                  <div className="font-medium">+1(437)-667-5323</div>
                 </div>
               </div>
             </div>
 
             {/* Email */}
-            <div className="flex flex-col items-center md:items-start space-y-2">
+            <div className="flex flex-col items-start space-y-2">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-permanent-foreground rounded-full flex items-center justify-center">
                   <svg className="w-5 h-5 text-sky" fill="currentColor" viewBox="0 0 20 20">
@@ -62,7 +62,7 @@ const Page = () => {
             </div>
 
             {/* Location */}
-            <div className="flex flex-col items-center md:items-start space-y-2">
+            <div className="flex flex-col items-start space-y-2">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-permanent-foreground rounded-full flex items-center justify-center">
                   <svg className="w-5 h-5 text-sky" fill="currentColor" viewBox="0 0 20 20">

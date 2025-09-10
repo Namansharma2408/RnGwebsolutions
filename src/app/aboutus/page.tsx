@@ -26,12 +26,12 @@ const page = () => {
       <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center min-h-screen px-4 sm:px-6 lg:px-8 py-16 sm:py-24'>
         <div className='space-y-6'>
           <div className='flex items-center justify-center w-full space-x-4 '>
-            <h1 className='text-5xl font-bold text-blue text-center'>
+            <h1 className='text-3xl  md:text-5xl font-bold text-blue text-center'>
               {' '}
               ~ WHO WE ARE
             </h1>
           </div>
-          <p className='font-normal text-3xl text-center w-1/2 mx-auto'>
+          <p className='font-normal text-lg md:text-3xl text-center w-3/4 md:w-1/2 mx-auto'>
             R&G Web Solutions was founded by two passionate entrepreneurs committed
             to helping local businesses thrive online. We believe in delivering
             quality, building long-term relationships, and exceeding our client&apos;s
@@ -71,7 +71,7 @@ const page = () => {
       <div>
         <div className='flex flex-col items-center justify-center w-full'>
           <div className='flex items-center justify-center w-fit px-12 space-x-4 py-16 bg-blue rounded-4xl'>
-            <h1 className='text-5xl font-bold text-permanent-foreground  text-center'>
+            <h1 className='text-3xl  md:text-5xl font-bold text-permanent-foreground  text-center'>
               MEET OUR TEAM
             </h1>
           </div>
@@ -139,12 +139,12 @@ const page = () => {
         </div>
         <div className='space-y-6'>
           <div className='flex items-center justify-center w-full space-x-4 '>
-            <h1 className='text-5xl font-bold text-blue text-center'>
+            <h1 className='text-3xl  md:text-5xl font-bold text-blue text-center'>
               {' '}
               ~ OUR MISSION
             </h1>
           </div>
-          <p className='font-normal text-3xl text-center w-1/2 mx-auto'>
+          <p className='font-normal text-lg md:text-3xl text-center w-3/4 md:w-1/2 mx-auto'>
             To provide reliable, modern, and effective web solutions that help local businesses compete and grow.
           </p>
         </div>
@@ -154,13 +154,13 @@ const page = () => {
 
         <div className='space-y-6'>
           <div className='flex items-center justify-center w-full space-x-4 '>
-            <h1 className='text-5xl font-bold text-blue text-center'>
+            <h1 className='text-3xl md:text-5xl font-bold text-blue text-center'>
               {' '}
               ~ WHY LOCAL BUSSINESS TRUST US
             </h1>
           </div>
           <div className='flex flex-col justify-center items-center'>
-            <ul className='font-normal text-3xl w-1/2 mx-auto list-disc list-inside '>
+            <ul className='font-normal text-lg md:text-3xl w-3/4 md:w-1/2 mx-auto list-disc list-inside '>
               <li>We listen to your needs</li>
               <li>We deliver on our promises</li>
               <li>We provide ongoing support</li>

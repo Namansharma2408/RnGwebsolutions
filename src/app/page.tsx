@@ -86,9 +86,9 @@ const Page = () => {
               <div className="relative w-[90%] max-w-[700px] aspect-square">
                 <Image
                   src={
-                    theme === "dark"
-                      ? "https://res.cloudinary.com/duusmu38g/image/upload/v1757449474/tpspdxr8czvdzmvvepau.svg"
-                      : "https://res.cloudinary.com/duusmu38g/image/upload/v1757449475/gimfgzszdu8ugegnszzv.svg"
+                    theme === "light"
+                    ? "https://res.cloudinary.com/duusmu38g/image/upload/v1757449475/gimfgzszdu8ugegnszzv.svg"
+                    : "https://res.cloudinary.com/duusmu38g/image/upload/v1757449474/tpspdxr8czvdzmvvepau.svg"
                   }
                   alt="R&G Web Solutions"
                   fill
@@ -191,14 +191,14 @@ const Page = () => {
             {servicesData.map((service) => (
               <div
                 key={service.id}
-                className="relative flex flex-col items-center justify-start text-left shadow-lg glass-effect p-6 sm:p-8 pt-16 sm:pt-20 bg-white/60 transition-all duration-300 hover:scale-105 hover:shadow-blue-500/20 mb-20"
+                className=" relative flex flex-col items-center justify-start text-left shadow-xl  bg-gradient-to-tr from-teal-500/40 via-blue-700/40 to-purple-900/50 backdrop-blur-xl border border-white/30 p-6 sm:p-8 pt-16 sm:pt-20 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-600 hover:border-white/50 mb-20 "
 
               >
                 {/* Floating image above card */}
                 <div className="absolute -top-12 sm:-top-16 left-1/2 -translate-x-1/2 w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center z-10">
                   <Image src={service.image} width={80} height={80} alt={service.title} className="object-contain drop-shadow-xl sm:w-[120px] sm:h-[120px]" />
                 </div>
-                <h2 className="text-xl sm:text-2xl font-bold mb-3 mt-2 text-sky text-center" >{service.title}</h2>
+                <h2 className="text-xl sm:text-2xl font-bold mb-3 mt-2 text-[#F5F5DC] text-center" >{service.title}</h2>
                 <p className="mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed text-white/80 text-center">{service.description}</p>
                 <button
                   className="flex items-center gap-2 font-medium py-2 px-4 sm:px-6 rounded-lg transition-colors duration-200 shadow text-permanent-foreground"
@@ -209,7 +209,7 @@ const Page = () => {
                     className="w-4 h-4 sm:w-5 sm:h-5 rounded-md flex items-center justify-center bg-white/30"
                   >
                     <svg width="12" height="12" fill="none" viewBox="0 0 24 24" className="sm:w-4 sm:h-4">
-                      <path stroke="var(--permanent-background)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
+                      <path stroke="var(--permanent-foreground)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
                     </svg>
                   </span>
                 </button>
@@ -493,41 +493,39 @@ const Page = () => {
               {/* Trust Points */}
               <div className='space-y-6'>
                 <div className='grid grid-cols-1 gap-4'>
-                  <div className='flex items-start gap-4 p-4 rounded-xl  '>
+                  <div className='flex items-start gap-4 p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20'>
                     <div className='w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1'>
                       <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
                       </svg>
                     </div>
                     <div>
-                      <h4 className='font-semibold text-foreground text-lg'>We listen to your needs</h4>
+                      <h4 className='font-semibold text-foreground text-base sm:text-lg'>We listen to your needs</h4>
                       <p className='text-foreground/70 text-sm mt-1'>Understanding your unique requirements and goals</p>
                     </div>
                   </div>
 
-                  <div className='flex items-start gap-4 p-4 rounded-xl '>
-                    <div className='flex items-start gap-4 p-4 rounded-xl '>
-                      <div className='w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1'>
-                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h4 className='font-semibold text-foreground text-lg'>We deliver on our promises</h4>
-                        <p className='text-foreground/70 text-sm mt-1'>Reliable execution and timely project completion</p>
-                      </div>
+                  <div className='flex items-start gap-4 p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20'>
+                    <div className='w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1'>
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
                     </div>
+                    <div>
+                      <h4 className='font-semibold text-foreground text-base sm:text-lg'>We deliver on our promises</h4>
+                      <p className='text-foreground/70 text-sm mt-1'>Reliable execution and timely project completion</p>
+                    </div>
+                  </div>
 
-                    <div className='flex items-start gap-4 p-4 rounded-xl  '>
-                      <div className='w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1'>
-                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h4 className='font-semibold text-foreground text-lg'>We provide ongoing support</h4>
-                        <p className='text-foreground/70 text-sm mt-1'>Continuous maintenance and technical assistance</p>
-                      </div>
+                  <div className='flex items-start gap-4 p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20'>
+                    <div className='w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1'>
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className='font-semibold text-foreground text-base sm:text-lg'>We provide ongoing support</h4>
+                      <p className='text-foreground/70 text-sm mt-1'>Continuous maintenance and technical assistance</p>
                     </div>
                   </div>
                 </div>
@@ -566,7 +564,7 @@ const Page = () => {
           <div className="max-w-xs sm:max-w-lg lg:max-w-3xl xl:max-w-4xl mx-auto mt-8 backdrop-blur-xl rounded-2xl p-6 sm:p-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center text-center md:text-left">
               {/* Phone Numbers */}
-              <div className="flex flex-col items-center md:items-start space-y-2">
+              <div className="flex flex-col items-start space-y-2">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-permanent-foreground rounded-full flex items-center justify-center">
                     <svg className="w-5 h-5 text-sky" fill="currentColor" viewBox="0 0 20 20">
@@ -581,7 +579,7 @@ const Page = () => {
               </div>
 
               {/* Email */}
-              <div className="flex flex-col items-center md:items-start space-y-2">
+              <div className="flex flex-col items-start space-y-2">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-permanent-foreground rounded-full flex items-center justify-center">
                     <svg className="w-5 h-5 text-sky" fill="currentColor" viewBox="0 0 20 20">
@@ -596,7 +594,7 @@ const Page = () => {
               </div>
 
               {/* Location */}
-              <div className="flex flex-col items-center md:items-start space-y-2">
+              <div className="flex flex-col items-start space-y-2">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-permanent-foreground rounded-full flex items-center justify-center">
                     <svg className="w-5 h-5 text-sky" fill="currentColor" viewBox="0 0 20 20">
