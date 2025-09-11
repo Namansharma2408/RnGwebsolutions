@@ -6,7 +6,7 @@ function ThemeToggle({ initialValue }: { initialValue?: 'light' | 'dark' }) {
   const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
