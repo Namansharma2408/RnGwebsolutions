@@ -552,9 +552,9 @@ const Page = () => {
               </div>
               <div>
                 <label className='block text-foreground text-lg font-medium mb-2' htmlFor='message'>Message</label>
-                <textarea className='w-full p-3 sm:p-4 rounded-lg bg-background/80 text-permanent-foreground placeholder:text-foreground/60 border border-foreground/20 focus:outline-none focus:ring-2 focus:ring-sky focus:border-sky transition-all duration-200 resize-none' id='message' name='message' placeholder='What are you say ?' rows={4}></textarea>
+                <textarea className='w-full p-3 sm:p-4 rounded-lg bg-background/80 text-foreground placeholder:text-foreground/60 border border-foreground/20 focus:outline-none focus:ring-2 focus:ring-sky focus:border-sky transition-all duration-200 resize-none' id='message' name='message' placeholder='What are you say ?' rows={4}></textarea>
               </div>
-              <button type='submit' className='w-full bg-blue-500  text-permanent-foreground font-bold py-3 sm:py-4 px-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl'>
+              <button type='submit' className='w-full bg-blue-500  text-foreground font-bold py-3 sm:py-4 px-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl'>
                 Book your free consultation
               </button>
             </form>
