@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import React, { useState } from 'react'
-import { useTheme } from '@/contexts/ThemeContext'  // Use the global theme context
+import { useTheme } from '@/contexts/ThemeContext'
 import { Logo } from "@/components";
 
 // Navigation items configuration (unchanged, but now theme-aware via styles)

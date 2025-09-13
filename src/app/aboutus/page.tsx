@@ -1,25 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-const Team = [
-  {
-    id: 1,
-    name: 'Raymond Shaw',
-    role: 'Co-Founder & CEO',
-    image: '/team1.jpg',
-  },
-  {
-    id: 2,
-    name: 'Gurjant Singh',
-    role: 'Co-Founder & CTO',
-    image: '/team2.jpg',
-  },
-  {
-    id: 3,
-    name: 'Naman Sharma',
-    role: 'Lead Designer',
-    image: '/team3.jpg',
-  },
-]
+import { DynamicTeamSection } from '@/lib'
+
 const page = () => {
   return (
     <div>
@@ -41,13 +23,14 @@ const page = () => {
         <div className='flex items-center justify-center w-full relative'>
           <div className='w-[529px] h-[529px] rounded-2xl flex items-center justify-center  relative'>
             <Image
-              src='https://res.cloudinary.com/duusmu38g/image/upload/v1757449474/lg0redk3yovoiwvn8dhr.png'
+              src='v1757449474/lg0redk3yovoiwvn8dhr.png'
               alt='About Us'
               layout='responsive'
               width={529}
               height={529}
               className='rounded-2xl'
-              priority
+              loading='eager'
+              
             />
             <div className='absolute -bottom-8 left-1/2 -translate-x-1/2 w-[400px] px-6 py-6 bg-slate rounded-2xl shadow-xl flex flex-col items-center justify-center text-center '>
               <h2 className='text-2xl font-semibold mb-2 text-foreground'>
@@ -68,73 +51,20 @@ const page = () => {
         </div>
       </div>
 
-      <div>
-        <div className='flex flex-col items-center justify-center w-full'>
-          <div className='flex items-center justify-center w-fit px-12 space-x-4 py-16 bg-blue rounded-4xl'>
-            <h1 className='text-3xl  md:text-5xl font-bold text-permanent-foreground  text-center'>
-              MEET OUR TEAM
-            </h1>
-          </div>
-          <div className='h-32 w-full' />
-          <div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
-              {Team.map(member => (
-                <div
-                  key={member.id}
-                  className='relative rounded-2xl shadow-md overflow-hidden flex flex-col items-center justify-center h-[402px] w-[402px] mx-auto'
-                >
-                  {/* Background image */}
-                  <div className='absolute inset-0 w-full h-full z-0'>
-                    <Image
-                      src='https://res.cloudinary.com/duusmu38g/image/upload/v1757449482/z7tk1xr6w5lwt4w6z22s.png'
-                      alt='Background'
-                      layout='fill'
-                      objectFit='cover'
-                      className='object-cover'
-                      priority
-                    />
-                  </div>
-                  {/* Member image */}
-                  <div className='relative z-10 flex flex-col items-center justify-center'>
-                    <Image
-                      src='https://res.cloudinary.com/duusmu38g/image/upload/v1757449476/qwi3sqtmygll4mezx8va.png'
-                      alt={member.name}
-                      layout='responsive'
-                      width={300}
-                      height={300}
-                      className='object-cover rounded-full  shadow-lg'
-                      priority
-                    />
-                    <div className='p-4 text-center'>
-                      <h3 className='text-xl font-semibold text-permanent-foreground'>
-                        {member.name}
-                      </h3>
-                      <p className='text-sm text-permanent-foreground'>
-                        {member.role}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <DynamicTeamSection />
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center min-h-screen px-4 sm:px-6 lg:px-8 py-16 sm:py-24'>
         <div className='flex items-center justify-center w-full relative'>
           <div className='w-[529px] h-[529px] rounded-2xl flex items-center justify-center  relative'>
             <Image
-              src='https://res.cloudinary.com/duusmu38g/image/upload/v1757449473/zapif77gqlqtsvsasxwq.png'
+              src='v1757449473/zapif77gqlqtsvsasxwq.png'
               alt='About Us'
               layout='responsive'
               width={529}
               height={529}
               className='rounded-2xl'
-              priority
+              loading='eager'
             />
-
           </div>
         </div>
         <div className='space-y-6'>
@@ -148,10 +78,9 @@ const page = () => {
             To provide reliable, modern, and effective web solutions that help local businesses compete and grow.
           </p>
         </div>
-
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center min-h-screen px-4 sm:px-6 lg:px-8 py-16 sm:py-24'>
 
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center min-h-screen px-4 sm:px-6 lg:px-8 py-16 sm:py-24'>
         <div className='space-y-6'>
           <div className='flex items-center justify-center w-full space-x-4 '>
             <h1 className='text-3xl md:text-5xl font-bold text-blue text-center'>
@@ -166,20 +95,18 @@ const page = () => {
               <li>We provide ongoing support</li>
             </ul>
           </div>
-
         </div>
         <div className='flex items-center justify-center w-full relative'>
           <div className='w-[529px] h-[529px] rounded-2xl flex items-center justify-center  relative'>
             <Image
-              src='https://res.cloudinary.com/duusmu38g/image/upload/v1757449471/iunadcac7gaaxbdzoo8u.png'
+              src='v1757449471/iunadcac7gaaxbdzoo8u.png'
               alt='About Us'
               layout='responsive'
               width={529}
               height={529}
               className='rounded-2xl'
-              priority
+              loading='eager'
             />
-
           </div>
         </div>
       </div>

@@ -6,16 +6,15 @@ import { Navbar, ThemeToggle } from "@/components";
 import { Footer } from "@/components";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: "RnG solutions",
@@ -34,7 +33,7 @@ export default async function RootLayout({
   return (
     <html lang="en" data-theme={theme?.value}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans bg-background text-foreground min-h-screen flex flex-col relative overflow-x-hidden`}
+        className={`font-sans bg-background text-foreground min-h-screen flex flex-col relative overflow-x-hidden`}
       >
         {/* Subtle Vibrant Background - Blue/Indigo/blue/Gray only */}
         <div className="fixed inset-0 w-full h-full -z-10 opacity-[0.25]">
