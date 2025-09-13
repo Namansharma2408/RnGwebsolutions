@@ -65,18 +65,18 @@ const Navbar = () => {
                     
 
                     {/* Desktop Navigation Items */}
-                    <div className='hidden md:flex items-center space-x-2 bg-foreground/10 px-2 py-2 rounded-full'>
+                    <div className='hidden md:flex items-center space-x-2 bg-foreground/10 px-2 py-2 rounded-full backdrop-blur-sm transition-all duration-300 ease-in-out hover:bg-foreground/15'>
                         {navigationItems.map((item) => (
                             <Link
                                 key={item.id}
                                 href={item.href}
                                 onClick={() => setActiveItem(item.id)}
-                                className={`flex items-center space-x-2 transition-colors ease-in-out duration-300 px-4 py-2 rounded-full text-foreground bg-background hover:bg-foreground/20 hover:text-foreground/80 ${
-                                    activeItem === item.id ? 'bg-foreground/20 text-foreground' : ''
+                                className={`flex items-center space-x-2 transition-all ease-in-out duration-300 px-4 py-2 rounded-full text-foreground bg-background hover:bg-foreground/20 hover:text-foreground/80 hover:scale-105 active:scale-95 ${
+                                    activeItem === item.id ? 'bg-foreground/20 text-foreground scale-105 shadow-lg' : ''
                                 }`}
                             >
-                                {item.icon}
-                                <span>{item.label}</span>
+                                <span className="transition-all duration-300 ease-in-out group-hover:rotate-12">{item.icon}</span>
+                                <span className="transition-all duration-300 ease-in-out">{item.label}</span>
                             </Link>
                         ))}
                     </div>
@@ -85,9 +85,9 @@ const Navbar = () => {
                     <div className="md:hidden">
                         <button 
                             onClick={toggleMobileMenu}
-                            className="text-foreground hover:text-foreground/80 focus:outline-none p-2"
+                            className="text-foreground hover:text-foreground/80 focus:outline-none p-2 transition-all duration-300 ease-in-out hover:scale-110 active:scale-95"
                         >
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-6 h-6 transition-all duration-300 ease-in-out" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
                         </button>
@@ -97,21 +97,21 @@ const Navbar = () => {
 
             {/* Mobile Menu Overlay */}
             {isMobileMenuOpen && (
-                <div className='h-[100vh] w-full bg-background/60 fixed inset-0 z-50'>
+                <div className='h-[100vh] w-full bg-background/60 backdrop-blur-sm fixed inset-0 z-50 transition-all duration-500 ease-in-out animate-in fade-in-0'>
                     <div className="flex flex-col items-center justify-center min-h-screen space-y-6 px-4 sm:px-6">
                         {/* Close Button */}
                         <button 
                             onClick={toggleMobileMenu}
-                            className="self-end text-foreground hover:text-foreground/80 focus:outline-none p-2"
+                            className="self-end text-foreground hover:text-foreground/80 focus:outline-none p-2 transition-all duration-300 ease-in-out hover:scale-110 active:scale-95"
                         >
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-6 h-6 transition-all duration-300 ease-in-out hover:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
 
                         {/* Mobile Navigation Items */}
                         <div className="flex flex-col space-y-4">
-                            {navigationItems.map((item) => (
+                            {navigationItems.map((item, index) => (
                                 <Link
                                     key={item.id}
                                     href={item.href}
@@ -119,12 +119,16 @@ const Navbar = () => {
                                         setActiveItem(item.id);
                                         setIsMobileMenuOpen(false);
                                     }}
-                                    className={`flex items-center space-x-3 transition-colors ease-in-out duration-300 px-4 sm:px-6 py-3 rounded-full text-foreground bg-background/90 backdrop-blur-sm border border-foreground/30 shadow-xl hover:bg-foreground/20 hover:text-foreground/80 ${
-                                        activeItem === item.id ? 'bg-foreground/30 text-foreground' : ''
+                                    className={`flex items-center space-x-3 transition-all ease-in-out duration-500 px-4 sm:px-6 py-3 rounded-full text-foreground bg-background/90 backdrop-blur-sm border border-foreground/30 shadow-xl hover:bg-foreground/20 hover:text-foreground/80 hover:scale-105 hover:shadow-2xl active:scale-95 ${
+                                        activeItem === item.id ? 'bg-foreground/30 text-foreground scale-105 shadow-2xl' : ''
                                     }`}
+                                    style={{ 
+                                        animationDelay: `${index * 100}ms`,
+                                        animation: 'slideInFromRight 0.5s ease-out forwards'
+                                    }}
                                 >
-                                    {item.icon}
-                                    <span className="text-lg">{item.label}</span>
+                                    <span className="transition-all duration-300 ease-in-out group-hover:rotate-12">{item.icon}</span>
+                                    <span className="text-lg transition-all duration-300 ease-in-out">{item.label}</span>
                                 </Link>
                             ))}
                         </div>

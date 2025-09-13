@@ -76,22 +76,22 @@ const HomeServicesSection = () => {
           {servicesData.map((service) => (
             <div
               key={service.id}
-              className=" relative flex flex-col items-center justify-start text-left shadow-xl  bg-gradient-to-tr from-teal-500/40 via-blue-700/40 to-purple-900/50 backdrop-blur-xl border border-white/30 p-6 sm:p-8 pt-16 sm:pt-20 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-600 hover:border-white/50 mb-20 "
+              className="group relative flex flex-col items-center justify-start text-left shadow-xl bg-gradient-to-tr from-teal-500/40 via-blue-700/40 to-purple-900/50 backdrop-blur-xl border border-white/30 p-6 sm:p-8 pt-16 sm:pt-20 transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-2xl hover:shadow-blue-600 hover:border-white/50 hover:from-teal-400/50 hover:via-blue-600/50 hover:to-purple-800/60 mb-20"
             >
               {/* Floating image above card */}
-              <div className="absolute -top-12 sm:-top-16 left-1/2 -translate-x-1/2 w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center z-10">
-                <Image src={service.image} width={80} height={80} alt={service.title} className="object-contain drop-shadow-xl sm:w-[120px] sm:h-[120px]" loading='lazy'/>
+              <div className="absolute -top-12 sm:-top-16 left-1/2 -translate-x-1/2 w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center z-10 transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:-rotate-6">
+                <Image src={service.image} width={80} height={80} alt={service.title} className="object-contain drop-shadow-xl sm:w-[120px] sm:h-[120px] transition-all duration-500 ease-in-out" loading='lazy'/>
               </div>
-              <h2 className="text-xl sm:text-2xl font-bold mb-3 mt-2 text-[#F5F5DC] text-center" >{service.title}</h2>
-              <p className="mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed text-white/80 text-center">{service.description}</p>
+              <h2 className="text-xl sm:text-2xl font-bold mb-3 mt-2 text-[#F5F5DC] text-center transition-all duration-300 ease-in-out group-hover:text-white group-hover:scale-105" >{service.title}</h2>
+              <p className="mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed text-white/80 text-center transition-all duration-300 ease-in-out group-hover:text-white/95">{service.description}</p>
               <button
-                className="flex items-center gap-2 font-medium py-2 px-4 sm:px-6 rounded-lg transition-colors duration-200 shadow text-permanent-foreground"
+                className="flex items-center gap-2 font-medium py-2 px-4 sm:px-6 rounded-lg transition-all duration-300 ease-in-out shadow text-permanent-foreground hover:bg-white/20 hover:scale-105 hover:shadow-lg active:scale-95"
               >
                 Read more
                 <span
-                  className="w-4 h-4 sm:w-5 sm:h-5 rounded-md flex items-center justify-center bg-white/30"
+                  className="w-4 h-4 sm:w-5 sm:h-5 rounded-md flex items-center justify-center bg-white/30 transition-all duration-300 ease-in-out group-hover:bg-white/50 group-hover:rotate-45"
                 >
-                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" className="sm:w-4 sm:h-4">
+                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" className="sm:w-4 sm:h-4 transition-all duration-300 ease-in-out">
                     <path stroke="var(--permanent-foreground)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
                   </svg>
                 </span>

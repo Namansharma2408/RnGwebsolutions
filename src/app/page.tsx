@@ -128,15 +128,15 @@ const Page = () => {
 							Professional web design, SEO, hosting, and AI solutions built for growth
 						</p>
 						<div className="flex flex-col sm:flex-row gap-6 lg:gap-10">
-							<button className="bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center px-8 py-4 text-lg text-white transition-all duration-300 hover:scale-105 shadow-xl">
+							<button className="group bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center px-8 py-4 text-lg text-white transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl active:scale-95 shadow-xl">
 								Book your <span className="font-bold mx-2">Free Consultation</span>
-								<svg className="w-6 h-6 text-white ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg className="w-6 h-6 text-white ml-2 transition-all duration-300 ease-in-out group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
 								</svg>
 							</button>
-							<button className="border-2 border-blue-500 hover:bg-blue-500 hover:text-white rounded-full flex items-center justify-center px-8 py-4 text-lg text-foreground transition-all duration-300 hover:scale-105">
+							<button className="group border-2 border-blue-500 hover:bg-blue-500 hover:text-white rounded-full flex items-center justify-center px-8 py-4 text-lg text-foreground transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 hover:shadow-xl">
 								Get my <span className="font-bold mx-2">Free Website Audit</span>
-								<svg className="w-6 h-6 text-blue-500 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg className="w-6 h-6 text-blue-500 group-hover:text-white ml-2 transition-all duration-300 ease-in-out group-hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<circle cx="12" cy="12" r="10" strokeWidth="2" />
 									<path d="M2 12h20" strokeWidth="2" />
 									<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" strokeWidth="2" />
@@ -193,14 +193,14 @@ const Page = () => {
 							<div className='space-y-4'>
 								<div className='flex items-center gap-4 justify-center lg:justify-start'>
 									{/* Icon */}
-									<div className='w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg'>
+									<div className='w-12 h-12 bg-purple-500  rounded-2xl flex items-center justify-center shadow-lg'>
 										<svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 											<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
 										</svg>
 									</div>
 
 									{/* Title */}
-									<h2 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-purple-400 text-center lg:text-left drop-shadow-lg'>
+									<h2 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-purple-500 text-center lg:text-left drop-shadow-lg'>
 										Who We Are
 									</h2>
 								</div>
@@ -227,15 +227,13 @@ const Page = () => {
 
 							{/* Call to Action Button */}
 							<div className='flex justify-center lg:justify-start pt-4'>
-								<button className='group relative inline-flex items-center gap-3 px-8 py-4  text-foreground/80 font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/25 border border-blue-400/30'>
-									<span className='text-lg'>Know more</span>
-									<div className='w-6 h-6 rounded-full bg-gray/60 flex items-center justify-center group-hover:bg-white/30 transition-all duration-300'>
-										<svg className="w-4 h-4 text-foreground group-hover:translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<button className='group relative inline-flex items-center gap-3 px-8 py-4 text-foreground/80 font-semibold rounded-full transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:shadow-blue-500/25 border border-blue-400/30 hover:border-blue-400/50 active:scale-95'>
+									<span className='text-lg transition-all duration-300 ease-in-out group-hover:text-foreground'>Know more</span>
+									<div className='w-6 h-6 rounded-full bg-gray/30 flex items-center justify-center group-hover:bg-white/30 transition-all duration-300 ease-in-out group'>
+										<svg className="w-4 h-4 text-foreground group-hover:translate-x-0.5 transition-all duration-300 ease-in-out" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 											<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
 										</svg>
 									</div>
-
-
 								</button>
 							</div>
 						</div>
