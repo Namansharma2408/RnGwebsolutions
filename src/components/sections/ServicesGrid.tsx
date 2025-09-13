@@ -46,18 +46,20 @@ const ServicesGrid = () => {
                     </div>
                     <h2 className="text-xl sm:text-2xl font-bold mb-3 mt-2 text-foreground  transition-all duration-300 ease-in-out group-hover:text-blue-500 " >{service.title}</h2>
                     <p className="mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed text-foreground/60  transition-all duration-300 ease-in-out group-hover:text-foreground/80 ">{service.description}</p>
-                    <button
-                        className="flex items-center gap-2 font-medium py-2 px-4 sm:px-6 rounded-lg transition-all duration-300 ease-in-out shadow-sm text-foreground/90 hover:text-foreground  hover:scale-105 hover:shadow-md active:scale-95 border border-foreground/20 hover:border-blue-400/50"
-                    >
-                        Read more
-                        <span className="w-4 h-4 sm:w-5 sm:h-5 rounded-md flex items-center justify-center transition-all duration-300 ease-in-out">
-                            <div className='bg-sky/20 p-1 rounded-md'>
-                                <svg width="12" height="12" fill="none" viewBox="0 0 24 24" className="sm:w-4 sm:h-4 transition-all duration-300 ease-in-out">
-                                    <path stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
-                                </svg>
-                            </div>
-                        </span>
-                    </button>
+                    <div className='w-fit'>
+                        <button
+                            className="flex items-center gap-2 font-medium py-2 px-4 sm:px-6 rounded-lg transition-all duration-300 ease-in-out shadow-sm text-foreground/90 hover:text-foreground  hover:scale-105 hover:shadow-md active:scale-95 border border-foreground/20 hover:border-blue-400/50"
+                        >
+                            Read more
+                            <span className="w-4 h-4 sm:w-5 sm:h-5 rounded-md flex items-center justify-center transition-all duration-300 ease-in-out">
+                                <div className='bg-sky/20 p-1 rounded-md'>
+                                    <svg width="12" height="12" fill="none" viewBox="0 0 24 24" className="sm:w-4 sm:h-4 transition-all duration-300 ease-in-out">
+                                        <path stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
+                                    </svg>
+                                </div>
+                            </span>
+                        </button>
+                    </div>
                 </div>
             ))}
         </div>
