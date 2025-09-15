@@ -198,6 +198,100 @@ body {
   position: relative;
 }
 
+/* Animated Border Effect */
+@keyframes border-light-vertical {
+  0% {
+    top: -2px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    top: 50%;
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: calc(100% + 2px);
+    opacity: 0;
+  }
+}
+
+@keyframes border-light-horizontal {
+  0% {
+    left: -2px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    left: 50%;
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: calc(100% + 2px);
+    opacity: 0;
+  }
+}
+
+.animated-border {
+  position: relative;
+}
+
+.animated-border::before,
+.animated-border::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  background: linear-gradient(180deg, transparent, rgba(135, 206, 235, 0.8), rgba(255, 255, 255, 0.9), rgba(135, 206, 235, 0.8), transparent);
+  border-radius: 1px;
+  box-shadow: 0 0 4px rgba(135, 206, 235, 0.4), 0 0 8px rgba(255, 255, 255, 0.2);
+  z-index: 10;
+}
+
+.animated-border::before {
+  left: 0;
+  animation: border-light-vertical 3s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.animated-border::after {
+  right: 0;
+  animation: border-light-vertical 3s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.animated-border .border-light-top,
+.animated-border .border-light-bottom {
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(135, 206, 235, 0.8), rgba(255, 255, 255, 0.9), rgba(135, 206, 235, 0.8), transparent);
+  border-radius: 1px;
+  box-shadow: 0 0 4px rgba(135, 206, 235, 0.4), 0 0 8px rgba(255, 255, 255, 0.2);
+  z-index: 10;
+}
+
+.animated-border .border-light-top {
+  top: 0;
+  animation: border-light-horizontal 3s ease-in-out infinite;
+  animation-delay: 0.75s;
+}
+
+.animated-border .border-light-bottom {
+  bottom: 0;
+  animation: border-light-horizontal 3s ease-in-out infinite;
+  animation-delay: 2.25s;
+}
+
 .card-interactive:hover {
   transform: translateY(-8px) rotate(-1deg);
 }
@@ -290,3 +384,6 @@ html {
   background: rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
+
+
+

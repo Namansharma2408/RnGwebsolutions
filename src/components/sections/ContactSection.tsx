@@ -4,7 +4,7 @@ import Image from 'next/image';
 const ContactSection = () => {
   return (
     <div className='min-h-screen relative flex items-center w-full py-8 sm:py-16 bg-red-50/20'>
-      <div className='absolute inset-0 bg-red-500'>
+      <div className='absolute inset-0'>
         <Image src='v1757449482/z7tk1xr6w5lwt4w6z22s.png' alt='Contact Us' fill  className='brightness-100 object-cover' loading='lazy'/>
         <div className='absolute inset-0 '></div>
       </div>

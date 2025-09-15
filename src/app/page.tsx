@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useTheme } from '@/contexts/ThemeContext'
 import { DynamicHomeServicesSection, DynamicContactSection } from '@/lib'
+import { FloatingIcon } from '@/components'
 
 const servicesData = [
 	{
@@ -55,32 +56,32 @@ const Page = () => {
 							{/* Floating Icons */}
 							<div className="absolute inset-0 pointer-events-none">
 								{/* Green Check */}
-								<div className="absolute top-[10%] left-[5%] w-14 h-14 sm:w-16 sm:h-16 bg-green-600 rounded-2xl flex items-center justify-center shadow-lg rotate-12">
+								<FloatingIcon className="top-[10%] left-[5%] w-14 h-14 sm:w-16 sm:h-16 bg-green-600 rounded-2xl flex items-center justify-center shadow-lg rotate-12" delay={0}>
 									<svg className="w-7 h-7 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
 									</svg>
-								</div>
+								</FloatingIcon>
 
 								{/* Orange Analytics */}
-								<div className="absolute top-[8%] right-[5%] w-14 h-14 sm:w-16 sm:h-16 bg-orange-500 rounded-2xl flex items-center justify-center shadow-lg -rotate-6">
+								<FloatingIcon className="top-[8%] right-[5%] w-14 h-14 sm:w-16 sm:h-16 bg-orange-500 rounded-2xl flex items-center justify-center shadow-lg -rotate-6" delay={1}>
 									<svg className="w-7 h-7 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
 									</svg>
-								</div>
+								</FloatingIcon>
 
 								{/* Purple Chat */}
-								<div className="absolute top-1/2 left-[5%] w-12 h-12 sm:w-14 sm:h-14 bg-purple-600 rounded-xl flex items-center justify-center shadow-lg rotate-45 -translate-y-1/2">
+								<FloatingIcon className="top-1/2 left-[5%] w-12 h-12 sm:w-14 sm:h-14 bg-purple-600 rounded-xl flex items-center justify-center shadow-lg rotate-45 -translate-y-1/2" delay={2}>
 									<svg className="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
 									</svg>
-								</div>
+								</FloatingIcon>
 
 								{/* Red Chart */}
-								<div className="absolute top-1/2 right-[5%] w-12 h-12 sm:w-14 sm:h-14 bg-red-500 rounded-xl flex items-center justify-center shadow-lg -rotate-30 translate-y-6">
+								<FloatingIcon className="top-1/2 right-[5%] w-12 h-12 sm:w-14 sm:h-14 bg-red-500 rounded-xl flex items-center justify-center shadow-lg -rotate-30 translate-y-6" delay={3}>
 									<svg className="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
 									</svg>
-								</div>
+								</FloatingIcon>
 							</div>
 
 							{/* Logo */}
@@ -165,18 +166,18 @@ const Page = () => {
 
 						{/* Left Side - Image */}
 						<div className='flex items-center justify-center w-full relative order-2 lg:order-1'>
-							<div className='relative w-full max-w-lg aspect-square'>
+							<div className='relative w-full max-w-lg aspect-square group'>
 								{/* Decorative background elements */}
-								<div className='absolute -top-4 -left-4 w-full h-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-3xl transform rotate-3 opacity-50'></div>
-								<div className='absolute -bottom-4 -right-4 w-full h-full bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-3xl transform -rotate-3 opacity-50'></div>
+								<div className='absolute -top-4 -left-4 w-full h-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-3xl transform rotate-3 opacity-50 hover:scale-105 hover:rotate-6 hover:opacity-70 group-hover:scale-105 group-hover:rotate-6 group-hover:opacity-70 transition-all duration-500 ease-out hover:shadow-2xl hover:shadow-blue-500/30 group-hover:shadow-2xl group_hover:shadow-blue-500/30'></div>
+								<div className='absolute -bottom-4 -right-4 w-full h-full bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-3xl transform -rotate-3 opacity-50 hover:scale-105 hover:-rotate-6 hover:opacity-70 group-hover:scale-105 group_hover:opacity-70 transition-all duration-500 ease-out hover:shadow-2xl hover:shadow-orange-500/30 group-hover:shadow-2xl group_hover:shadow-orange-500/30'></div>
 
 								{/* Main image container */}
-								<div className='relative w-full h-full rounded-3xl overflow-hidden shadow-2xl border border-permanent-foreground/10 '>
+								<div className='relative w-full h-full rounded-3xl  shadow-2xl border border-permanent-foreground/10 '>
 									<Image
 										src='v1757449474/lg0redk3yovoiwvn8dhr.png'
 										alt='About Us - Two entrepreneurs working together'
 										fill
-										className='object-cover'
+										className='object-cover hover:scale-110 duration-400 ease-in-out rounded-3xl '
 										sizes="(max-width: 768px) 100vw, 50vw"
 										loading='eager'
 									/>
@@ -301,28 +302,29 @@ const Page = () => {
 						</div>
 
 						{/* Right Side - Image */}
-						<div className='flex items-center justify-center w-full relative order-1 lg:order-2'>
-							<div className='relative w-full max-w-lg aspect-square'>
+						<div className='flex items-center justify-center w-full relative order-2 lg:order-1'>
+							<div className='relative w-full max-w-lg aspect-square group'>
 								{/* Decorative background elements */}
-								<div className='absolute -top-4 -right-4 w-full h-full bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-3xl transform -rotate-3 opacity-50'></div>
-								<div className='absolute -bottom-4 -left-4 w-full h-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-3xl transform rotate-3 opacity-50'></div>
+								<div className='absolute -top-4 -right-4 w-full h-full bg-gradient-to-br from-orange-500/30 to-yellow-500/40 rounded-3xl transform -rotate-3 opacity-50 hover:scale-105 hover:-rotate-6 hover:opacity-70 group-hover:scale-105 group_hover:opacity-70 transition-all duration-500 ease-out hover:shadow-2xl hover:shadow-orange-500/30 group-hover:shadow-2xl group_hover:shadow-orange-500/30'></div>
+								<div className='absolute -bottom-4 -left-4 w-full h-full bg-gradient-to-br from-blue-500/60 to-cyan-500/30 rounded-3xl transform rotate-3 opacity-50 hover:scale-105 hover:rotate-6 hover:opacity-70 group-hover:scale-105 group_hover:rotate-6 group_hover:opacity-70 transition-all duration-500 ease-out hover:shadow-2xl hover:shadow-blue-500/30 group-hover:shadow-2xl group_hover:shadow-blue-500/30'></div>
 
 								{/* Main image container */}
-								<div className='relative w-full h-full rounded-3xl overflow-hidden shadow-2xl border border-white/20 bg-white/10 backdrop-blur-sm'>
+								<div className='relative w-full h-full  shadow-2xl  '>
 									<Image
 										src='v1757449473/zapif77gqlqtsvsasxwq.png'
 										alt='Our Mission - Business Growth and Success'
 										fill
-										className='object-cover'
+										className='object-cover hover:scale-110 duration-400 ease-in-out rounded-3xl'
 										sizes="(max-width: 768px) 100vw, 50vw"
 										loading='eager'
 									/>
 
-									{/* Subtle overlay for better contrast */}
-									<div className='absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent'></div>
+
+
 								</div>
 							</div>
 						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -340,18 +342,18 @@ const Page = () => {
 
 						{/* Left Side - Image */}
 						<div className='flex items-center justify-center w-full relative order-2 lg:order-1'>
-							<div className='relative w-full max-w-lg aspect-square'>
+							<div className='relative w-full max-w-lg aspect-square group'>
 								{/* Decorative background elements */}
-								<div className='absolute -top-4 -left-4 w-full h-full bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-3xl transform rotate-3 opacity-50'></div>
-								<div className='absolute -bottom-4 -right-4 w-full h-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-3xl transform -rotate-3 opacity-50'></div>
+								<div className='absolute -top-4 -left-4 w-full h-full bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-3xl transform rotate-3 opacity-50 hover:scale-105 hover:rotate-6 hover:opacity-70 group-hover:scale-105 group-hover:rotate-6 group_hover:opacity-70 transition-all duration-500 ease-out hover:shadow-2xl hover:shadow-green-500/30 group-hover:shadow-2xl group_hover:shadow-green-500/30'></div>
+								<div className='absolute -bottom-4 -right-4 w-full h-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-3xl transform -rotate-3 opacity-50 hover:scale-105 hover:-rotate-6 hover:opacity-70 group-hover:scale-105 group_hover:opacity-70 transition-all duration-500 ease-out hover:shadow-2xl hover:shadow-blue-500/30 group-hover:shadow-2xl group_hover:shadow-blue-500/30'></div>
 
 								{/* Main image container */}
-								<div className='relative w-full h-full rounded-3xl overflow-hidden shadow-2xl border border-permanent-foreground/10 bg-white dark:bg-gray-900'>
+								<div className='relative w-full h-full  shadow-2xl border border-permanent-foreground/10 '>
 									<Image
 										src='v1757449471/iunadcac7gaaxbdzoo8u.png'
 										alt='Why Local Business Trust Us'
 										fill
-										className='object-cover'
+										className='object-cover hover:scale-110 duration-400 ease-in-out rounded-3xl'
 										sizes="(max-width: 768px) 100vw, 50vw"
 										loading='eager'
 									/>
