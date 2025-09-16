@@ -5,6 +5,7 @@ import { cookies } from "next/headers";
 import { Navbar, ThemeToggle } from "@/components";
 import { Footer } from "@/components";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import { th } from "framer-motion/client";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -28,7 +29,7 @@ export default async function RootLayout({
 }>) {
 
   const cookieStore = await cookies();
-  const theme = cookieStore?.get('theme');
+  const theme = cookieStore?.get('theme') || {value:'light'};
   type Theme = 'light' | 'dark';
   return (
     <html lang="en" data-theme={theme?.value}>
@@ -52,7 +53,7 @@ export default async function RootLayout({
           <nav className="top-0 z-50  flex justify-center items-center p-4">
             <Navbar />
             <div className="ml-4">
-              <ThemeToggle initialValue={(theme?.value as Theme) || 'light'} />
+              <ThemeToggle initialValue={theme?.value as Theme} />
             </div>
           </nav>
 

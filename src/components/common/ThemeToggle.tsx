@@ -42,9 +42,9 @@ function ThemeToggle({ initialValue }: { initialValue?: 'light' | 'dark' }) {
           flex items-center justify-center
           shadow-lg
           ${
-            theme === 'dark'
-              ? 'translate-x-10 bg-gradient-to-br from-indigo to-blue'
-              : 'translate-x-0 bg-gradient-to-br from-yellow to-orange'
+            theme === 'light'
+            ? 'translate-x-0 bg-gradient-to-br from-yellow to-orange'
+            : 'translate-x-10 bg-gradient-to-br from-indigo to-blue'
           }
         `}
       >

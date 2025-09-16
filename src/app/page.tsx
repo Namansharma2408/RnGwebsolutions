@@ -88,9 +88,9 @@ const Page = () => {
 							<div className="relative w-[90%] max-w-[700px] aspect-square">
 								<Image
 									src={
-										theme === "light"
-										? "v1757449475/gimfgzszdu8ugegnszzv.svg"
-										: "v1757449474/tpspdxr8czvdzmvvepau.svg"
+										theme === "dark"
+										? "v1757449474/tpspdxr8czvdzmvvepau.svg"
+										: "v1757449475/gimfgzszdu8ugegnszzv.svg"
 									}
 									alt="R&G Web Solutions"
 									fill
