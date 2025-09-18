@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import CustomButton from './CustomButton';
 
 const servicesData = [
   {
@@ -8,6 +9,7 @@ const servicesData = [
     description:
       'Custom, responsive, and visually appealing websites designed to match your brand and convert visitors into customers.',
     image: 'v1757449470/kevgx1qfxxoaiod9lofx.svg',
+    route: 'web-design',
   },
   {
     id: 2,
@@ -15,6 +17,7 @@ const servicesData = [
     description:
       'Custom, responsive, and visually appealing websites designed to match your brand and convert visitors into customers.',
     image: 'v1757449471/jcugksw0rzywexxpn6ej.svg',
+    route: 'hosting-and-deployment',
   },
   {
     id: 3,
@@ -22,6 +25,7 @@ const servicesData = [
     description:
       'Improve your search engine rankings and ensure customers can find you online.',
     image: 'v1757449470/bhk4gezjc223vzqlulfv.svg',
+    route: 'seo-optimization',
   },
   {
     id: 4,
@@ -29,6 +33,7 @@ const servicesData = [
     description:
       'Prevent insider threat with visibility and alerts for anomalous activities in any SaaS app',
     image: 'v1757449470/ajyv9r4limpawovkpcni.svg',
+    route: 'ai-integration',
   },
 ];
 
@@ -88,8 +93,10 @@ const HomeServicesSection = () => {
               </div>
               <h2 className="text-xl sm:text-2xl font-bold mb-3 mt-2 text-permanent-foreground/90 text-center transition-all duration-300 ease-in-out group-hover:text-permanent-foreground group-hover:scale-105" >{service.title}</h2>
               <p className="mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed text-permanent-foreground/80 text-center transition-all duration-300 ease-in-out group-hover:text-permanent-foreground/95">{service.description}</p>
-              <button
+              <CustomButton
                 className="flex items-center gap-2 font-medium py-2 px-4 sm:px-6 rounded-lg transition-all duration-300 ease-in-out shadow text-permanent-foreground hover:bg-white/20 hover:scale-105 hover:shadow-lg active:scale-95"
+                route={service.route}
+                trackClick
               >
                 Read more
                 <span
@@ -99,7 +106,7 @@ const HomeServicesSection = () => {
                     <path stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
                   </svg>
                 </span>
-              </button>
+              </CustomButton>
             </div>
           ))}
         </div>

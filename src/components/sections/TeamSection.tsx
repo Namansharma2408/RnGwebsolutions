@@ -5,26 +5,26 @@ const Team = [
 	{
 		id: 1,
 		name: 'Raymond Shaw',
-		role: 'Co-Founder & CEO',
-		image: '/team1.jpg',
+		role: 'Marketing Head',
+		image: 'v1758185870/kcdnt7ynbwqkgqd2wlf3.jpg',
 		description:
-			'Raymond Shaw is a visionary entrepreneur with over 10 years of experience in digital transformation. As Co-Founder and CEO, he leads strategic initiatives that drive innovation and growth for local businesses across Canada.',
+			'Raymond Shaw is a strategic marketing professional with expertise in brand development and digital marketing campaigns. As Marketing Head, he crafts compelling brand narratives and implements data-driven marketing strategies that boost online visibility and drive customer acquisition for businesses.',
 	},
 	{
 		id: 2,
 		name: 'Gurjant Singh',
-		role: 'Co-Founder & CTO',
-		image: '/team2.jpg',
+		role: 'Lead Generator',
+		image: 'v1758185886/gd2hagxwmp3bt68pkfkw.jpg',
 		description:
-			'Gurjant Singh brings deep technical expertise in web development and AI integration. As Co-Founder and CTO, he architect solutions that combine cutting-edge technology with practical business applications.',
+			'Gurjant Singh specializes in business development and client acquisition strategies. As Lead Generator, he identifies potential clients, builds strategic partnerships, and implements conversion-focused campaigns that consistently deliver high-quality leads and sustainable business growth.',
 	},
 	{
 		id: 3,
 		name: 'Naman Sharma',
-		role: 'Lead Designer',
-		image: '/team3.jpg',
+		role: 'Technical Head',
+		image: 'v1757449476/qwi3sqtmygll4mezx8va.png',
 		description:
-			'Naman Sharma is a creative design professional specializing in user experience and brand identity. His designs create intuitive, visually appealing interfaces that enhance user engagement and business success.',
+			'Naman Sharma is an accomplished technical leader with deep expertise in web development, system architecture, and emerging technologies. As Technical Head, he oversees all technical operations, ensures robust solutions, and leads the implementation of cutting-edge technologies for optimal performance.',
 	},
 ];
 
@@ -61,7 +61,7 @@ const TeamSection = () => {
 									<div className='relative mb-6'>
 										<div className='w-64 h-48 rounded-full overflow-hidden  shadow-xl transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:shadow-2xl group-hover:ring-blue-400/50'>
 											<Image
-												src='v1757449476/qwi3sqtmygll4mezx8va.png'
+												src={member.image}
 												alt={member.name}
 												layout='responsive'
 												width={128}

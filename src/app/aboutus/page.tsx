@@ -62,7 +62,7 @@ const page = () => {
               layout='responsive'
               width={529}
               height={529}
-              className='rounded-2xl'
+              className='rounded-4xl hover:scale-105 transition-all duration-300 ease-in-out'
               loading='eager'
             />
           </div>
@@ -104,7 +104,7 @@ const page = () => {
               layout='responsive'
               width={529}
               height={529}
-              className='rounded-2xl'
+              className='rounded-4xl hover:scale-105 transition-all duration-300 ease-in-out'
               loading='eager'
             />
           </div>

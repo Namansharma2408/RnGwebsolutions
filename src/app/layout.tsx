@@ -5,15 +5,6 @@ import { Navbar, ThemeToggle } from "@/components";
 import { Footer } from "@/components";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 
 export const metadata: Metadata = {
   title: "RnG solutions",
