@@ -8,16 +8,13 @@ interface YouTubeEmbedProps {
   title?: string;       // Video title
 }
 
-export  function YouTubeEmbed({
+export function YouTubeEmbed({
   videoId,
   thumbnail,
   title = "YouTube Video",
 }: YouTubeEmbedProps) {
   const [play, setPlay] = useState(false);
 
-  // Default YouTube thumbnail if none provided
-  const videoThumbnail =
-    thumbnail || `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 
   return (
     <div className="relative w-full max-w-3xl mx-auto aspect-video rounded-xl overflow-hidden shadow-lg">
@@ -26,14 +23,17 @@ export  function YouTubeEmbed({
           className="relative w-full h-full cursor-pointer"
           onClick={() => setPlay(true)}
         >
-          <Image
-            src={videoThumbnail}
-            alt=''
-            fill
-            className="object-cover rounded-xl"
+          {/* ✅ FIX: give Image explicit `fill` container */}
+          <img
+            src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+            alt={title}
+            className="object-cover rounded-xl w-full h-full"
+            loading="eager"
           />
-          <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-            <button className="bg-white text-black px-6 py-3 rounded-full font-bold">
+
+          {/* Play button overlay */}
+          <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+            <button className="bg-white text-black px-6 py-3 rounded-full font-bold shadow-lg">
               ▶ Play
             </button>
           </div>
@@ -48,15 +48,16 @@ export  function YouTubeEmbed({
         />
       )}
 
-      {/* Optional link to YouTube */}
+      {/* Watch on YouTube link */}
       <a
         href={`https://www.youtube.com/watch?v=${videoId}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="absolute bottom-2 right-2 text-white bg-black/50 px-3 py-1 rounded hover:bg-black/70 text-sm"
+        className="absolute bottom-2 right-2 text-white bg-black/60 px-3 py-1 rounded hover:bg-black/80 text-sm"
       >
         Watch on YouTube
       </a>
     </div>
+
   );
 }
