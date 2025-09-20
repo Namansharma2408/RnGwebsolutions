@@ -1,6 +1,39 @@
 import React from 'react'
 import Image from 'next/image'
 import { DynamicServicesGrid, DynamicTermsSection } from '@/lib'
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Services | RnG Solutions",
+  description:
+    "Discover RnG Solutions' services including Web Design And Development, hosting & deployment, SEO optimization, and AI integration — helping businesses grow with technology-driven solutions.",
+  keywords: [
+    "RnG Solutions services",
+    "Web Design And Development",
+    "Hosting",
+    "Deployment",
+    "SEO Optimization",
+    "AI Integration",
+    "Business Growth",
+    "Technology Solutions",
+  ],
+  openGraph: {
+    title: "Our Services | RnG Solutions",
+    description:
+      "Explore RnG Solutions' services — Web Design And Development, Hosting & Deployment, SEO Optimization, and AI Integration to power your business online.",
+    url: "https://yourdomain.com/services",
+    siteName: "RnG Solutions",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Services | RnG Solutions",
+    description:
+      "RnG Solutions provides Web Design And Development, Hosting & Deployment, SEO Optimization, and AI Integration tailored for your business growth.",
+  },
+  
+};
 
 const page = () => {
 	return (

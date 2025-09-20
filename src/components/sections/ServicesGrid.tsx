@@ -6,7 +6,7 @@ import CustomButton from './CustomButton';
 const servicesData = [
     {
         id: 1,
-        title: 'Web Design',
+        title: 'Web Design And Development',
         description:
             'Custom, responsive, and visually appealing websites designed to match your brand and convert visitors into customers.',
         image: 'v1757449470/kevgx1qfxxoaiod9lofx.svg',

@@ -1,6 +1,39 @@
 import React from 'react'
 import Image from 'next/image'
 import { DynamicTeamSection } from '@/lib'
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us | RnG Web Solutions",
+  description:
+    "Learn about RnG Web Solutions — founded by passionate entrepreneurs to help local businesses thrive online. Discover our mission, values, and why businesses trust us for web solutions.",
+  keywords: [
+    "RnG Web Solutions",
+    "About RnG",
+    "Who We Are",
+    "Our Mission",
+    "Local Business Growth",
+    "Trusted Web Solutions",
+    "Web Development Company",
+  ],
+  openGraph: {
+    title: "About Us | RnG Web Solutions",
+    description:
+      "At RnG Web Solutions, we are committed to delivering modern, reliable, and effective web solutions that help local businesses succeed online.",
+    url: "https://yourdomain.com/about",
+    siteName: "RnG Web Solutions",
+    
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | RnG Web Solutions",
+    description:
+      "RnG Web Solutions was founded to empower local businesses with modern Web Design And Development, SEO, and hosting solutions. Learn why businesses trust us.",
+    
+  },
+};
 
 const page = () => {
   return (
@@ -37,14 +70,13 @@ const page = () => {
                 Looking for help?
               </h2>
               <p className='text-foreground/80 mb-2 text-base'>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                Reach out to our team for a free consultation.
               </p>
               <a
                 href='#'
                 className='text-blue font-medium hover:underline'
               >
-                Lorem Ipsum is simply dummy
+                Get Started
               </a>
             </div>
           </div>

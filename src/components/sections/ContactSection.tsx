@@ -17,11 +17,11 @@ const ContactSection = () => {
           <form action="" className="space-y-4 sm:space-y-6">
             <div>
               <label className='block text-permanent-foreground text-lg font-medium mb-2 transition-all duration-300 ease-in-out' htmlFor='email'>Email</label>
-              <input className='w-full p-3 sm:p-4 rounded-lg bg-background/80 text-permanent-foreground placeholder:text-foreground/60 border border-foreground/20 focus:outline-none focus:ring-2 focus:ring-sky focus:border-sky transition-all duration-300 ease-in-out hover:bg-background/90 hover:border-foreground/30' type='email' id='email' name='email' placeholder='Enter your email' />
+              <input className='w-full p-3 sm:p-4 rounded-lg bg-background/80 text-foreground placeholder:text-foreground/60 border border-foreground/20 focus:outline-none focus:ring-2 focus:ring-sky focus:border-sky transition-all duration-300 ease-in-out hover:bg-background/90 hover:border-foreground/30' type='email' id='email' name='email' placeholder='Enter your email' />
             </div>
             <div>
               <label className='block text-permanent-foreground text-lg font-medium mb-2 transition-all duration-300 ease-in-out' htmlFor='message'>Message</label>
-              <textarea className='w-full p-3 sm:p-4 rounded-lg bg-background/80 text-permanent-foreground placeholder:text-foreground/60 border border-foreground/20 focus:outline-none focus:ring-2 focus:ring-sky focus:border-sky transition-all duration-300 ease-in-out resize-none hover:bg-background/90 hover:border-foreground/30' id='message' name='message' placeholder='What are you say ?' rows={4}></textarea>
+              <textarea className='w-full p-3 sm:p-4 rounded-lg bg-background/80 text-foreground placeholder:text-foreground/60 border border-foreground/20 focus:outline-none focus:ring-2 focus:ring-sky focus:border-sky transition-all duration-300 ease-in-out resize-none hover:bg-background/90 hover:border-foreground/30' id='message' name='message' placeholder='What are you say ?' rows={4}></textarea>
             </div>
             <button type='submit' className='w-full bg-blue-500 text-permanent-foreground font-bold py-3 sm:py-4 px-4 rounded-lg transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl hover:bg-blue-600 hover:scale-[1.02] active:scale-[0.98]'>
               Book your free consultation

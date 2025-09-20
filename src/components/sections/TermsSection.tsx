@@ -11,7 +11,7 @@ const termsandconditions = [
     id: 2,
     title: 'Service Description',
     description:
-      'We provide web design, hosting, SEO optimization, and AI integration services as described on our website.',
+      'We provide Web Design And Development, hosting, SEO optimization, and AI integration services as described on our website.',
   },
   {
     id: 3,

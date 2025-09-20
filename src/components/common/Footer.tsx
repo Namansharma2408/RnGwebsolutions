@@ -32,7 +32,7 @@ const Footer = () => {
 
                     {/* Right Section - Links */}
                     <div className="flex-1">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
                             {/* Support Column */}
                             <div>
                                 <h3 className="text-white font-semibold mb-4">Support</h3>

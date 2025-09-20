@@ -5,36 +5,7 @@ import { useTheme } from '@/contexts/ThemeContext'
 import { DynamicHomeServicesSection, DynamicContactSection } from '@/lib'
 import { FloatingIcon } from '@/components'
 
-const servicesData = [
-	{
-		id: 1,
-		title: 'Web Design',
-		description:
-			'Custom, responsive, and visually appealing websites designed to match your brand and convert visitors into customers.',
-		image: 'v1757449470/kevgx1qfxxoaiod9lofx.svg',
-	},
-	{
-		id: 2,
-		title: 'Hosting and Deployment',
-		description:
-			'Custom, responsive, and visually appealing websites designed to match your brand and convert visitors into customers.',
-		image: 'v1757449471/jcugksw0rzywexxpn6ej.svg',
-	},
-	{
-		id: 3,
-		title: 'SEO Optimization',
-		description:
-			'Improve your search engine rankings and ensure customers can find you online.',
-		image: 'v1757449470/bhk4gezjc223vzqlulfv.svg',
-	},
-	{
-		id: 4,
-		title: 'AI Integration',
-		description:
-			'Prevent insider threat with visibility and alerts for anomalous activities in any SaaS app',
-		image: 'v1757449470/ajyv9r4limpawovkpcni.svg',
-	},
-]
+
 const Page = () => {
 	const { theme: contextTheme } = useTheme();
 	const [theme, setTheme] = useState(contextTheme);
@@ -126,7 +97,7 @@ const Page = () => {
 				<div className="flex-shrink-0 py-12 px-4 sm:px-6 lg:px-16">
 					<div className="w-full max-w-7xl mx-auto flex flex-col items-center">
 						<p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl opacity-75 max-w-4xl text-center mb-8">
-							Professional web design, SEO, hosting, and AI solutions built for growth
+							Professional Web Design And Development, SEO, hosting, and AI solutions built for growth
 						</p>
 						<div className="flex flex-col sm:flex-row gap-6 lg:gap-10">
 							<button className="group bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center px-8 py-4 text-lg text-white transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl active:scale-95 shadow-xl">

@@ -5,7 +5,7 @@ import CustomButton from './CustomButton';
 const servicesData = [
   {
     id: 1,
-    title: 'Web Design',
+    title: 'Web Design And Development',
     description:
       'Custom, responsive, and visually appealing websites designed to match your brand and convert visitors into customers.',
     image: 'v1757449470/kevgx1qfxxoaiod9lofx.svg',
@@ -39,24 +39,24 @@ const servicesData = [
 
 const HomeServicesSection = () => {
   return (
-    <div className='relative py-24 px-6 sm:px-8 lg:px-16'>
+    <div className='relative py-12 px-6 sm:px-8 lg:px-16 '>
       {/* Background Cloud */}
-      <div className='absolute inset-0 -z-10'>
+      <div className='absolute inset-0 -z-10 max-h-full overflow-auto'>
         <Image
           src='v1757449482/z7tk1xr6w5lwt4w6z22s.png'
           alt='Background Cloud'
           fill
           priority
-          className="object-cover"
+          className="object-cover max-h-full overflow-auto"
         />
       </div>
 
       {/* Services Content */}
-      <div className='max-w-7xl mx-auto'>
+      <div className='max-w-7xl mx-auto max-h-full'>
         {/* Section Header */}
-        <div className='text-center mb-20'>
+        <div className='text-center mb-12'>
           {/* Section Label */}
-          <div className='flex items-center justify-center gap-3 mb-6'>
+          <div className='flex items-center justify-center gap-3 mb-4'>
             <Image
               src='v1757449472/l81bzetoh63reo15qgmb.svg'
               alt='Service Icon'
@@ -71,13 +71,13 @@ const HomeServicesSection = () => {
           </div>
 
           {/* Main Title */}
-          <h2 className='text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-permanent-foreground leading-tight max-w-5xl mx-auto'>
+          <h2 className='text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-permanent-foreground leading-tight max-w-5xl mx-auto mb-24 '>
             We design, develop and scale digital solutions that turn visitors into customers
           </h2>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 mx-4 sm:mx-6 lg:mx-5 mt-20 sm:mt-30 lg:mt-40">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 mx-4 sm:mx-6 lg:mx-5  mt-4 sm:mt-6 lg:mt-8 xl:mt-10">
           {servicesData.map((service) => (
             <div
               key={service.id}
@@ -112,7 +112,7 @@ const HomeServicesSection = () => {
         </div>
       </div>
 
-      <div className=' mt-20 flex justify-center'>
+      <div className='flex justify-center'>
         <button className='bg-permanent-foreground hover:bg-permanent-foreground/90 rounded-full flex items-center justify-center px-8 py-4 text-lg text-permanent-background font-semibold transition-all duration-300 hover:scale-105 shadow-xl border border-permanent-foreground/20'>
           Get Started
           <span className='font-bold mx-2'>
