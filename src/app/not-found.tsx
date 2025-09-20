@@ -34,8 +34,8 @@ export default function NotFound() {
                         Oops! Page Not Found
                     </h2>
                     <p className="text-lg sm:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-                        The page you're looking for seems to have wandered off into the digital void. 
-                        Don't worry, it happens to the best of us!
+                        The page you&apos;re looking for seems to have wandered off into the digital void. 
+                        Don&apos;t worry, it happens to the best of us!
                     </p>
                 </div>
 
@@ -81,7 +81,7 @@ export default function NotFound() {
                 {/* Fun Message */}
                 <div className="pt-6">
                     <p className="text-sm text-foreground/50 italic">
-                        "Not all those who wander are lost... but this page definitely is!" 🚀
+                        &rdquo;Not all those who wander are lost... but this page definitely is! &rdquo;🚀
                     </p>
                 </div>
             </div>

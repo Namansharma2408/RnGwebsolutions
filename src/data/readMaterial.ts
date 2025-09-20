@@ -1,5 +1,3 @@
-import { image, video } from "framer-motion/client";
-
 export const material = [
   {
     id: 1,
@@ -8,7 +6,7 @@ export const material = [
     image: "v1757449470/kevgx1qfxxoaiod9lofx.svg",
     content: [
       "When someone comes across a new business, their first instinct is often to look it up online. The place where they land — the website — becomes their first introduction. Web design and development are the processes that shape how this introduction happens.",
-      "Web design is about the look and feel. It decides how information is placed, how easy it is to navigate, and how the overall experience feels to someone visiting for the first time. A well-thought-out design makes it simple for people to find what they need without confusion, while also giving a sense of the brand's style and personality.",
+      "Web design is about the look and feel. It decides how information is placed, how easy it is to navigate, and how the overall experience feels to someone visiting for the first time. A well-thought-out design makes it simple for people to find what they need without confusion, while also giving a sense of the brand&apos;s style and personality.",
       "Web development works behind the scenes to make this design functional. It ensures that pages load quickly, that everything works smoothly on both mobile and desktop, and that the website can handle growth as the business expands. Development is where the design is translated into a working platform — reliable, responsive, and ready to serve.",
       "Together, design and development create more than just a digital space. They form an impression that can shape how people view a business. A website is often the modern storefront, open at all hours, accessible from anywhere, and capable of leaving a lasting mark on anyone who visits.",
     ],
@@ -64,7 +62,7 @@ export const material = [
       "SEO (Search Engine Optimization) is the process of making a website more visible to people searching for products, services, or information online. It ensures that a business appears in relevant search results, increasing the chances of attracting visitors and potential customers.",
       "SEO involves several aspects, including optimizing website content, structure, and performance. Clear headings, relevant keywords, fast loading speeds, and mobile-friendly layouts all contribute to better visibility on search engines. Additionally, technical elements such as meta tags, sitemaps, and structured data help search engines understand and index the website accurately.",
       "Effective SEO also includes monitoring and improving user experience. Search engines prioritize websites that are easy to navigate, informative, and engaging. By optimizing both content and technical aspects, SEO helps a website rank higher, attract targeted traffic, and build credibility online.",
-      "For businesses, SEO optimization means more than just traffic. It ensures that the right audience finds the website, which can lead to increased inquiries, leads, and conversions. A well-optimized site strengthens the brand's online presence, giving it an edge in competitive markets while providing long-term value without constant advertising spend.",
+      "For businesses, SEO optimization means more than just traffic. It ensures that the right audience finds the website, which can lead to increased inquiries, leads, and conversions. A well-optimized site strengthens the brand&apos;s online presence, giving it an edge in competitive markets while providing long-term value without constant advertising spend.",
     ],
     videoId: "MYE6T_gd7H0",
     blogs: [
