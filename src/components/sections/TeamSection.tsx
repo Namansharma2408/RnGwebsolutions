@@ -51,7 +51,7 @@ const TeamSection = () => {
 										src='v1757449482/z7tk1xr6w5lwt4w6z22s.png'
 										alt='Background'
 										fill
-										className='object-cover transition-all duration-500 ease-in-out group-hover:brightness-110 opacity-60'
+										className='object-cover transition-all duration-500 ease-in-out group-hover:brightness-110'
 										loading='lazy'
 									/>
 									<div className='absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10'></div>
@@ -73,7 +73,7 @@ const TeamSection = () => {
 									</div>
 									<div className='px-6 pb-6 text-center space-y-3'>
 										<div className='space-y-2'>
-											<h3 className='text-2xl font-bold text-gray-900 dark:text-white transition-all duration-300 ease-in-out group-hover:text-blue-600 dark:group-hover:text-blue-400'>
+											<h3 className='text-2xl font-bold text-permanent-foreground transition-all duration-300 ease-in-out group-hover:text-blue-600 dark:group-hover:text-blue-400'>
 												{member.name}
 											</h3>
 											<p className='text-sm font-medium text-permanent-foreground uppercase tracking-wide'>
@@ -81,7 +81,7 @@ const TeamSection = () => {
 											</p>
 										</div>
 										<div className='w-16 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full'></div>
-										<p className='text-sm text-gray-600 dark:text-gray-300 leading-relaxed max-w-xs mx-auto transition-all duration-300 ease-in-out group-hover:text-gray-800 dark:group-hover:text-gray-200'>
+										<p className='text-sm text-permanent-foreground leading-relaxed max-w-xs mx-auto transition-all duration-300 ease-in-out group-hover:text-gray-800 dark:group-hover:text-gray-200'>
 											{member.description}
 										</p>
 									</div>
