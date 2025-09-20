@@ -2,7 +2,7 @@
 
 import { useTheme } from '@/contexts/ThemeContext';
 
-function ThemeToggle({ initialValue }: { initialValue?: 'light' | 'dark' }) {
+function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {

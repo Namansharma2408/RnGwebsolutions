@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 
 interface YouTubeEmbedProps {
   videoId: string;      // YouTube video ID
@@ -10,7 +9,6 @@ interface YouTubeEmbedProps {
 
 export function YouTubeEmbed({
   videoId,
-  thumbnail,
   title = "YouTube Video",
 }: YouTubeEmbedProps) {
   const [play, setPlay] = useState(false);

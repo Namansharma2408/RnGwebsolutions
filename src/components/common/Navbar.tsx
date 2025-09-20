@@ -52,7 +52,6 @@ const navigationItems = [
 const Navbar = () => {
     const [activeItem, setActiveItem] = useState('vision');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const { theme } = useTheme();  // Get current theme for dynamic behavior
 
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 

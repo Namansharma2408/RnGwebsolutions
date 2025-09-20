@@ -68,7 +68,7 @@ export default async function RootLayout({
           <nav className="top-0 z-50  flex justify-center items-center p-4">
             <Navbar />
             <div className="ml-4">
-              <ThemeToggle initialValue={theme?.value as Theme} />
+              <ThemeToggle  />
             </div>
           </nav>
 

@@ -66,7 +66,7 @@ export default async function DynamicPage({ params }: PageProps) {
                     {/* Insert video after first paragraph only */}
                     {index === 1 && (
                       <div className="w-full aspect-video rounded-xl overflow-hidden shadow-xl border border-foreground/10 bg-background my-6">
-                        <YouTubeEmbed videoId={page.videoId} thumbnail={`https://img.youtube.com/vi/${page.videoId}/maxresdefault.jpg`}/>
+                        <YouTubeEmbed videoId={page.videoId} />
                       </div>
                     )}
                     <p>{para}</p>
