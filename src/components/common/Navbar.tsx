@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Logo } from "@/components";
 
 // Navigation items configuration (unchanged, but now theme-aware via styles)

@@ -1,8 +1,7 @@
-import React from 'react'
-import { DynamicContactSection } from '@/lib'
+import { ContactSection } from '@/components'
 
 const Page = () => {
-  return <DynamicContactSection />
+  return <ContactSection />
 }
 
 export default Page

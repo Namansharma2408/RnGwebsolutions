@@ -1,8 +1,8 @@
 "use client"
-import React, { useState, useEffect } from 'react'
+import  { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useTheme } from '@/contexts/ThemeContext'
-import { DynamicHomeServicesSection, DynamicContactSection } from '@/lib'
+import { HomeServicesSection, ContactSection } from '@/components'
 import { FloatingIcon } from '@/components'
 
 
@@ -122,7 +122,7 @@ const Page = () => {
 
 
 			{/* Services Section */}
-			<DynamicHomeServicesSection />
+			<HomeServicesSection />
 
 			{/* Who We Are Section */}
 			<div className='relative py-20 px-6 sm:px-8 lg:px-16 bg-gradient-to-br from-background via-background to-blue-50/30 dark:to-purple-950/20'>
@@ -412,7 +412,7 @@ const Page = () => {
 					</div>
 				</div>
 			</div>
-			<DynamicContactSection />
+			<ContactSection />
 		</div>
 	)
 }

@@ -1,6 +1,6 @@
-import React from 'react'
+
 import Image from 'next/image'
-import { DynamicServicesGrid, DynamicTermsSection } from '@/lib'
+import { ServicesGrid, TermsSection } from '@/components'
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -46,7 +46,7 @@ const page = () => {
 				</div>
 			</div>
 
-			<DynamicServicesGrid />
+			<ServicesGrid />
 
 			{/* Render backgroundCloud image after all main content */}
 			<div className='relative w-full h-[200px] mt-20'>
@@ -63,7 +63,7 @@ const page = () => {
 			</div>
 
 			{/* Terms and Conditions Section */}
-			<DynamicTermsSection />
+			<TermsSection />
 		</div>
 	)
 }
