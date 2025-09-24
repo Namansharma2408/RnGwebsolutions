@@ -59,8 +59,11 @@ const Navbar = () => {
             <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-4">
                 <div className="flex items-center justify-between">
                     {/* Logo Section */}
-                    <Logo />
-                    
+                    <Link href="/">
+                        <div className=' ease-in-out duration-300  origin-top-left md:scale-125 lg:scale-150 '>
+                            <Logo />
+                        </div>
+                    </Link>
 
                     {/* Desktop Navigation Items */}
                     <div className='hidden md:flex items-center space-x-2 bg-foreground/10 px-2 py-2 rounded-full backdrop-blur-sm transition-all duration-300 ease-in-out hover:bg-foreground/15'>
@@ -69,9 +72,8 @@ const Navbar = () => {
                                 key={item.id}
                                 href={item.href}
                                 onClick={() => setActiveItem(item.id)}
-                                className={`flex items-center space-x-2 transition-all ease-in-out duration-300 px-4 py-2 rounded-full text-foreground bg-background hover:bg-foreground/20 hover:text-foreground/80 hover:scale-105 active:scale-95 ${
-                                    activeItem === item.id ? 'bg-foreground/20 text-foreground scale-105 shadow-lg' : ''
-                                }`}
+                                className={`flex items-center space-x-2 transition-all ease-in-out duration-300 px-4 py-2 rounded-full text-foreground bg-background hover:bg-foreground/20 hover:text-foreground/80 hover:scale-105 active:scale-95 ${activeItem === item.id ? 'bg-foreground/20 text-foreground scale-105 shadow-lg' : ''
+                                    }`}
                             >
                                 <span className="transition-all duration-300 ease-in-out group-hover:rotate-12">{item.icon}</span>
                                 <span className="transition-all duration-300 ease-in-out">{item.label}</span>
@@ -81,7 +83,7 @@ const Navbar = () => {
 
                     {/* Mobile Menu Button */}
                     <div className="md:hidden">
-                        <button 
+                        <button
                             onClick={toggleMobileMenu}
                             className="text-foreground hover:text-foreground/80 focus:outline-none p-2 transition-all duration-300 ease-in-out hover:scale-110 active:scale-95"
                         >
@@ -98,7 +100,7 @@ const Navbar = () => {
                 <div className='h-[100vh] w-full bg-background/60 backdrop-blur-sm fixed inset-0 z-50 transition-all duration-500 ease-in-out animate-in fade-in-0'>
                     <div className="flex flex-col items-center justify-center min-h-screen space-y-6 px-4 sm:px-6">
                         {/* Close Button */}
-                        <button 
+                        <button
                             onClick={toggleMobileMenu}
                             className="self-end text-foreground hover:text-foreground/80 focus:outline-none p-2 transition-all duration-300 ease-in-out hover:scale-110 active:scale-95"
                         >
@@ -117,10 +119,9 @@ const Navbar = () => {
                                         setActiveItem(item.id);
                                         setIsMobileMenuOpen(false);
                                     }}
-                                    className={`flex items-center space-x-3 transition-all ease-in-out duration-500 px-4 sm:px-6 py-3 rounded-full text-foreground bg-background/90 backdrop-blur-sm border border-foreground/30 shadow-xl hover:bg-foreground/20 hover:text-foreground/80 hover:scale-105 hover:shadow-2xl active:scale-95 ${
-                                        activeItem === item.id ? 'bg-foreground/30 text-foreground scale-105 shadow-2xl' : ''
-                                    }`}
-                                    style={{ 
+                                    className={`flex items-center space-x-3 transition-all ease-in-out duration-500 px-4 sm:px-6 py-3 rounded-full text-foreground bg-background/90 backdrop-blur-sm border border-foreground/30 shadow-xl hover:bg-foreground/20 hover:text-foreground/80 hover:scale-105 hover:shadow-2xl active:scale-95 ${activeItem === item.id ? 'bg-foreground/30 text-foreground scale-105 shadow-2xl' : ''
+                                        }`}
+                                    style={{
                                         animationDelay: `${index * 100}ms`,
                                         animation: 'slideInFromRight 0.5s ease-out forwards'
                                     }}
