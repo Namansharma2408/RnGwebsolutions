@@ -11,14 +11,6 @@ const Team = [
 	},
 	{
 		id: 2,
-		name: 'Gurjant Singh',
-		role: 'Lead Generator',
-		image: 'v1758185886/gd2hagxwmp3bt68pkfkw.jpg',
-		description:
-			'Gurjant Singh specializes in business development and client acquisition strategies. As Lead Generator, he identifies potential clients, builds strategic partnerships, and implements conversion-focused campaigns that consistently deliver high-quality leads and sustainable business growth.',
-	},
-	{
-		id: 3,
 		name: 'Naman Sharma',
 		role: 'Technical Head',
 		image: 'v1757449476/qwi3sqtmygll4mezx8va.png',
@@ -38,7 +30,7 @@ const TeamSection = () => {
 				</div>
 				<div className='h-32 w-full' />
 				<div>
-					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 space-around-8 gap-12 px-4 sm:px-6 lg:px-8'>
 						{Team.map(member => (
 							<div
 								key={member.id}
