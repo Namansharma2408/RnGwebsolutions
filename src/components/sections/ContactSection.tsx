@@ -41,7 +41,6 @@ const ContactSection = () => {
                 </div>
                 <div className="text-permanent-foreground transition-all duration-300 ease-in-out group-hover:text-sky">
                   <div className="font-medium">+1(647)-986-2677</div>
-                  <div className="text-sm">+1(437)-667-5323</div>
                 </div>
               </div>
             </div>
